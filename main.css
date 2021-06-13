@@ -194,10 +194,10 @@ img {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background: url("https://res.cloudinary.com/de9fgkkam/image/upload/v1623283566/personal_portafolio/leaves02_dszyxy.jpg") 0 0;
+  background: url("https://res.cloudinary.com/de9fgkkam/image/upload/v1623283566/personal_portafolio/leaves02_dszyxy.jpg") 0 0 / cover;
   /* background-color: #000; */
   /* background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%); */
-  background-size: cover;
+  /* background-size: cover; */
   position: relative;
   background-attachment: fixed;
 }
