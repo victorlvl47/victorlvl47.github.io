@@ -36,7 +36,7 @@ html {
   */
   font-size: 62.5%;
   scroll-behavior: smooth;
-  background: #000;
+  background: #1a1a1a;
 }
 
 /* A few media query to set some font sizes at different screen sizes.
@@ -198,8 +198,8 @@ img {
   /* background-color: #000; */
   /* background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%); */
   /* background-size: cover; */
-  position: relative;
-  background-attachment: fixed;
+  /* position: relative; */
+  /* background-attachment: fixed; */
 }
 
 .welcome-section::after {
@@ -209,7 +209,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 1;
 }
 
@@ -510,4 +510,10 @@ footer i {
 
 .portfolio-block .caption .search-icon i {
   line-height: 50px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .welcome-section {
+    background-attachment: fixed;
+  }
 }
