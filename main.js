@@ -1,8 +1,21 @@
+// Set the current year in the footer section
+function setCurrentYearInFooter() {
+  // Get the current year
+  const CURRENT_YEAR = new Date().getFullYear();
+
+  // get the <span id="current-year"> element
+  let current_year_span = document.getElementById("current-year");
+
+  // set the current year in the <span id="current-year"> element
+  current_year_span.innerText = CURRENT_YEAR
+} // setCurrentYearInFooter END
+
+
 $(window).scroll(function() {
   if ($(this).scrollTop() > 100) {
       $('#navbar')
         .addClass('navbar-scrolled');
-  } 
+  }
   else {
     $('#navbar')
       .removeClass(
@@ -33,4 +46,4 @@ $(window).scroll(function() {
     });
   });
 
-
+setCurrentYearInFooter();
