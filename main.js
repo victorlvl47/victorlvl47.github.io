@@ -1,3 +1,13 @@
+// change the color of the navbar when the user scrolls down the website
+function whenScrolledDownChangeNavbarColor() {
+  if ($(this).scrollTop() > 100) {
+    $('#navbar').addClass('navbar-scrolled');
+  }
+  else {
+    $('#navbar').removeClass('navbar-scrolled');
+  }
+}
+
 // Set to the current year in the footer section
 function setCurrentYearInFooter() {
   // Get the current year
@@ -26,12 +36,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
   $(window).on('scroll', function() {
 
-    if ($(this).scrollTop() > 100) {
-      $('#navbar').addClass('navbar-scrolled');
-    }
-    else {
-      $('#navbar').removeClass('navbar-scrolled');
-    }
+    // change the color of the navbar when the website is being scrolled down
+    whenScrolledDownChangeNavbarColor();
 
     var cur_pos = $(this).scrollTop() + 200;
 
@@ -45,7 +51,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         }
         main_nav.find('a[href="#' + $(this).attr('id') + '"]').parent('li').addClass('active');
       }
-      
+
       if (cur_pos < 300) {
         $(".nav ul:first li:first").addClass('active');
       }
