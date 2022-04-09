@@ -56,6 +56,13 @@ document.addEventListener('DOMContentLoaded', (e) => {
   var main_nav = $('.nav');
 
 
+  // Handle click on "Load more" button
+  $('#btn-load-more').on('click', function(){
+      // Load more data
+      console.log("Load More button clicked!");
+   });
+
+
   // When the user scrolls the website
   $(window).on('scroll', function() {
 
