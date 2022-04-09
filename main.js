@@ -8,6 +8,26 @@ function whenScrolledDownChangeNavbarColor() {
   }
 }
 
+// highligt the current navbar item, depending of the
+// section the user is currently on.
+function highlightCurrentSectionInNavbar(nav_sections, main_nav) {
+
+  var cur_pos = $(this).scrollTop() + 200;
+
+  nav_sections.each(function() {
+    var top = $(this).offset().top,
+        bottom = top + $(this).outerHeight();
+
+    if (cur_pos >= top && cur_pos <= bottom) {
+      if (cur_pos <= bottom) {
+        main_nav.find('li').removeClass('active');
+      }
+      main_nav.find('a[href="#' + $(this).attr('id') + '"]').parent('li').addClass('active');
+    }
+  }); // nav_sections.each END
+
+}
+
 // Set to the current year in the footer section
 function setCurrentYearInFooter() {
   // Get the current year
@@ -29,33 +49,22 @@ function setCurrentYearInFooter() {
 document.addEventListener('DOMContentLoaded', (e) => {
   console.log(`Hi! Welcome to my website.`);
 
-  // Navigation active state on scroll
+  // For Navigation active state on scroll
+  // Select the website sections
   var nav_sections = $('section');
+  // Select the navbar
   var main_nav = $('.nav');
 
 
+  // When the user scrolls the website
   $(window).on('scroll', function() {
 
     // change the color of the navbar when the website is being scrolled down
     whenScrolledDownChangeNavbarColor();
 
-    var cur_pos = $(this).scrollTop() + 200;
-
-    nav_sections.each(function() {
-      var top = $(this).offset().top,
-          bottom = top + $(this).outerHeight();
-
-      if (cur_pos >= top && cur_pos <= bottom) {
-        if (cur_pos <= bottom) {
-          main_nav.find('li').removeClass('active');
-        }
-        main_nav.find('a[href="#' + $(this).attr('id') + '"]').parent('li').addClass('active');
-      }
-
-      if (cur_pos < 300) {
-        $(".nav ul:first li:first").addClass('active');
-      }
-    }); // nav_sections.each END
+    // highligt the current navbar item, depending of the
+    // section the user is currently on.
+    highlightCurrentSectionInNavbar(nav_sections, main_nav);
 
   }); // $(window).on('scroll', ...) END
 
