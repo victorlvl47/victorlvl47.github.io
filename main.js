@@ -57,10 +57,22 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
 
   // Handle click on "Load more" button
-  $('#btn-load-more').on('click', function(){
+  //$('#btn-load-more').on('click', function(){
       // Load more data
-      console.log("Load More button clicked!");
-   });
+      //console.log("Load More button clicked!");
+   //});
+
+   $('.projects-grid').btnLoadmore({
+
+                showItem : 6,
+
+                whenClickBtn : 3,
+
+                textBtn : 'Load more...',
+
+                classBtn : 'btn btn-show-all'
+
+            });
 
 
   // When the user scrolls the website
