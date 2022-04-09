@@ -310,6 +310,7 @@ img {
   display: inline-block;
   padding: 1rem 2rem;
   border-radius: 2px;
+  border: none;
 }
 
 .btn-show-all {
@@ -438,7 +439,7 @@ footer i {
 
 .portfolio-block:before {
   transition: all 0.3s ease-in-out;
-  
+
   background: rgba(255, 255, 255, 0.7);
   opacity: 0;
   top: 20px;
