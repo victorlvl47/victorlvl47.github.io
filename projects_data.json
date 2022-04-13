@@ -1,0 +1,130 @@
+{
+  "data": [
+    {
+      "link_to_project": "https://codepen.io/victorlvl47/full/QWpVEeE",
+      "image_src": "https://res.cloudinary.com/de9fgkkam/image/upload/v1626050617/personal_portafolio/medimine_thumbnail_tfrpqw.png",
+      "project_title": "Medimine Landing Page",
+      "project_description": "A landing page with news and information about how the concept application 'Medimine' works.",
+      "date": null
+    },
+    {
+      "link_to_project": "https://codepen.io/victorlvl47/full/JjWKEmE",
+      "image_src": "https://res.cloudinary.com/de9fgkkam/image/upload/v1622617496/personal_portafolio/tribute_albert_camus_qukvly.png",
+      "project_title": "Tribute Page",
+      "project_description": "Albert Camus tribute page, information about his works and personal life.",
+      "date": null
+    },
+    {
+      "link_to_project": "https://codepen.io/victorlvl47/full/yLMoXOL",
+      "image_src": "https://res.cloudinary.com/de9fgkkam/image/upload/v1622619793/personal_portafolio/js_docs_croped_yk6idv.png",
+      "project_title": "Documentation Page",
+      "project_description": "A documentation page for the javascript language aimed to beginners.",
+      "date": null
+    },
+    {
+      "link_to_project": "https://codepen.io/victorlvl47/full/bGqBEwQ",
+      "image_src": "https://res.cloudinary.com/de9fgkkam/image/upload/v1622660333/personal_portafolio/survey_form_fcc_khv41w.png",
+      "project_title": "Survey Form",
+      "project_description": "A Survey Form for Free Code Camp.",
+      "date": null
+    },
+    {
+      "link_to_project": "https://codepen.io/victorlvl47/full/XWMRbdm",
+      "image_src": "https://res.cloudinary.com/de9fgkkam/image/upload/v1622661087/personal_portafolio/yummyy_bears_concept_mkcxsc.png",
+      "project_title": "Yummyy Bears",
+      "project_description": "A concept website for a company that sells gummy bears.",
+      "date": null
+    },
+    {
+      "link_to_project": "https://codepen.io/victorlvl47/full/zYwqZeY",
+      "image_src": "https://res.cloudinary.com/de9fgkkam/image/upload/v1626047808/personal_portafolio/rushmachine_thumbnail_yy4tb5.png",
+      "project_title": "RushMachine",
+      "project_description": "A virtual sound board to help you create a catchy beat.",
+      "date": null
+    },
+    {
+      "link_to_project": "https://codepen.io/victorlvl47/full/ExmVEap",
+      "image_src": "https://res.cloudinary.com/de9fgkkam/image/upload/v1626045606/personal_portafolio/random_quote_generator_thumbnail_xccpq0.png",
+      "project_title": "Random Quote Machine",
+      "project_description": "A website that generates a random famous quote.",
+      "date": null
+    },
+    {
+      "link_to_project": "https://codepen.io/victorlvl47/full/poPjWdE",
+      "image_src": "https://res.cloudinary.com/de9fgkkam/image/upload/v1626046188/personal_portafolio/markdow_previewer_thumbnail_n9wdq1.png",
+      "project_title": "Markdown Online",
+      "project_description": "An online Markdown editor and previewer.",
+      "date": null
+    },
+    {
+      "link_to_project": "https://codepen.io/victorlvl47/full/NWjRNQJ",
+      "image_src": "https://res.cloudinary.com/de9fgkkam/image/upload/v1626047083/personal_portafolio/pomodoro_thumbnail_oukgsa.png",
+      "project_title": "Pomodoro Tracker",
+      "project_description": "A pomodoro tracker tool to help you focus on your current task.",
+      "date": null
+    },
+    {
+      "link_to_project": "https://codepen.io/victorlvl47/full/WNjQvQN",
+      "image_src": "https://res.cloudinary.com/de9fgkkam/image/upload/v1626048572/personal_portafolio/reactcalculator_thumbnail_scca1b.png",
+      "project_title": "React Calculator",
+      "project_description": "A mininal calculator made with reactjs with a vintage style.",
+      "date": null
+    },
+    {
+      "link_to_project": "https://github.com/victorlvl47/HandTrackingDemo",
+      "image_src": "https://res.cloudinary.com/de9fgkkam/image/upload/v1629166638/personal_portafolio/hand_tracking_edited_gkfo51.gif",
+      "project_title": "CV Hand Tracking",
+      "project_description": "A hand tracking demo with MediaPipe that can be used with a webcam or a video file.",
+      "date": null
+    },
+    {
+      "link_to_project": "https://github.com/victorlvl47/PoseMediaPipeDemo",
+      "image_src": "https://res.cloudinary.com/de9fgkkam/image/upload/v1629851922/personal_portafolio/pose_detection_thumbnail_xrmzpt.gif",
+      "project_title": "CV Pose Detection",
+      "project_description": "A MediaPipe Pose Demo, human pose estimation from video.",
+      "date": null
+    },
+    {
+      "link_to_project": "https://github.com/victorlvl47/FaceDetectionDemo",
+      "image_src": "https://res.cloudinary.com/de9fgkkam/image/upload/v1629872392/personal_portafolio/faceDetectionThumbnail_jgxcme.png",
+      "project_title": "CV Face Detection",
+      "project_description": "Computer vision, face detection demo with MediaPipe from a video.",
+      "date": null
+    },
+    {
+      "link_to_project": "https://github.com/victorlvl47/FaceMeshDemo",
+      "image_src": "https://res.cloudinary.com/de9fgkkam/image/upload/v1629946834/personal_portafolio/faceMeshDemoThumbnail_ihemwl.png",
+      "project_title": "CV Face Mesh",
+      "project_description": "A face mesh demo from video file with MediaPipe.",
+      "date": null
+    },
+    {
+      "link_to_project": "https://github.com/victorlvl47/PoseMediaPipeDemo",
+      "image_src": "https://res.cloudinary.com/de9fgkkam/image/upload/v1630377782/personal_portafolio/CVTrainerAssistantThumbnail_o80vwc.png",
+      "project_title": "CV Trainer Assistant",
+      "project_description": "A computer vision trainer assistant demo made possible with the use of MediaPipe and OpenCV.",
+      "date": null
+    },
+    {
+      "link_to_project": "https://github.com/victorlvl47/HandTrackingDemo",
+      "image_src": "https://res.cloudinary.com/de9fgkkam/image/upload/v1630638240/personal_portafolio/cv_paint_thumbnail_edited_rh0mne.png",
+      "project_title": "CV Paint Demo",
+      "project_description": "A MS Paint like application but you use your hand as the cursor to paint and select colors and tools.",
+      "date": null
+    },
+    {
+      "link_to_project": "https://github.com/victorlvl47/cvMouseDemo",
+      "image_src": "https://res.cloudinary.com/de9fgkkam/image/upload/v1630640289/personal_portafolio/cvMouse_thumbnail_edited_ouftto.png",
+      "project_title": "CV Mouse",
+      "project_description": "Use your webcam and hand gestures to control your computer's mouse cursor. Made with MediaPipe and OpenCV2.",
+      "date": null
+    },
+    {
+      "link_to_project": "https://github.com/victorlvl47/HandTrackingDemo",
+      "image_src": "https://res.cloudinary.com/de9fgkkam/image/upload/v1630640666/personal_portafolio/hand_gesture_as_a_control_thumbnail_edited_y5hviz.png",
+      "project_title": "Hand Gesture as a Control",
+      "project_description": "Use hand gestures to control the volume of your computer. Made with MediaPipe and pyalsaaudio.",
+      "date": null
+    }
+  ]
+}

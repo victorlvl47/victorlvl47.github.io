@@ -70,9 +70,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
                 textBtn : 'Load More',
 
-                classBtn : 'btn btn-show-all',
-
-                delayToScroll: 1000
+                classBtn : 'btn btn-show-all'
 
             });
 
