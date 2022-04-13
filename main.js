@@ -68,9 +68,11 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
                 whenClickBtn : 3,
 
-                textBtn : 'Load more...',
+                textBtn : 'Load More',
 
-                classBtn : 'btn btn-show-all'
+                classBtn : 'btn btn-show-all',
+
+                delayToScroll: 1000
 
             });
 
