@@ -56,6 +56,64 @@ document.addEventListener('DOMContentLoaded', (e) => {
   var main_nav = $('.nav');
 
 
+  // Get the data about the projects from a json file.
+  $.ajax({
+    dataType: "json",
+    url: "https://res.cloudinary.com/de9fgkkam/raw/upload/v1650288805/personal_portafolio/projects_data_hdiuhg.json",
+    data: {},
+    success: function(result, status, xhr) {
+      console.log("Success, we got the data about the projects.");
+      console.table(result.data[6]);
+
+      // Create a <a></a> element with a link to the current project
+      var $project_element_link = $('<a>', {href: result.data[6].link_to_project,
+                                            target: "_blank",
+                                            class: "project"});
+
+      // create the <div> element that goes inside the <a> element.
+      var $portafolio_block_element = $('<div>', {class: "portfolio-block"});
+      $project_element_link.append($portafolio_block_element);
+
+      // create the <img> element, the image for the project.
+      var $project_image_element = $('<img>', {class: "project-image",
+                                               src: result.data[6].image_src,
+                                               alt: "project"});
+     // Add the image to the <div class='portafolio-block'> element.
+     $portafolio_block_element.append($project_image_element);
+
+     // Create the <div class='caption'> element
+     var $caption_element = $('<div>', {class: "caption"});
+     $portafolio_block_element.append($caption_element);
+
+     // Create the external link icon.
+     var $external_link_icon = $('<p class="search-icon"><i class="fa fa-external-link-square-alt"></i></p><h4>Go to Project</h4>');
+     $caption_element.append($external_link_icon);
+
+     // Create the project description element <p class="project-description">.
+     var $project_description = $('<p>', {class: "project-description", text: result.data[6].project_description});
+     $caption_element.append($project_description);
+
+     // Create the <p class="project-title"> for the project title
+     var $project_title_element = $('<p>', {class: "project-title"});
+     $project_title_element.append('<span class="code">&#91;</span>');
+     $project_title_element.append(result.data[6].project_title);
+     $project_title_element.append('<span class="code">&#93;</span>');
+     // Append to the project link
+     $project_element_link.append($project_title_element);
+
+      console.log($project_element_link);
+
+      $('.projects-grid').append($project_element_link);
+
+
+    },
+    error: function(xhr, status, error) {
+      console.log("Couldn't get data about the projects.");
+      console.log(error);
+    }
+  });
+
+
   // Handle click on "Load more" button
   //$('#btn-load-more').on('click', function(){
       // Load more data
