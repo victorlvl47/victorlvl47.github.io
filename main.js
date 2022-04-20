@@ -51,7 +51,7 @@ function setCurrentYearInFooter() {
 
 // Create the project item and add it to the website
 // projectsList: an array with all the data of the projects to show.
-function createProjectItem(projectData) {
+function createProjectTile(projectData) {
 
   // Create a <a></a> element with a link to the current project
   var $project_element_link = $('<a>', {href: projectData.link_to_project,
@@ -92,6 +92,7 @@ function createProjectItem(projectData) {
 
   console.log($project_element_link);
 
+  // Append the project-tile to the projects-grid container
   $('.projects-grid').append($project_element_link);
 } // END createProjectItem
 
@@ -142,7 +143,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
       console.table(result.data[6]);
 
       // Create the project item and add it to the website
-      createProjectItem(result.data[6]);
+      createProjectTile(result.data[6]);
 
       // Create the "Load More" button, to display more project items
       // when clicked.
@@ -153,7 +154,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
       console.log("Couldn't get data about the projects.");
       console.log(error);
     }
-  });
+  }); // END Request to the projects data JSON file
 
 
   // When the user scrolls the website
