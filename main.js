@@ -90,7 +90,7 @@ function createProjectTile(projectData) {
   // Append to the project link
   $project_element_link.append($project_title_element);
 
-  console.log($project_element_link);
+  // console.log($project_element_link);
 
   // Append the project-tile to the projects-grid container
   $('.projects-grid').append($project_element_link);
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     data: {},
     success: function(result, status, xhr) {
       console.log("Success, we got the data about the projects.");
-      console.table(result.data[6]);
+      // console.table(result.data[6]);
 
       // Create the project item and add it to the website
       createProjectTile(result.data[6]);
