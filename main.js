@@ -6,7 +6,7 @@ function whenScrolledDownChangeNavbarColor() {
   else {
     $('#navbar').removeClass('navbar-scrolled');
   }
-}
+} // END whenScrolledDownChangeNavbarColor
 
 
 
@@ -29,7 +29,7 @@ function highlightCurrentSectionInNavbar(nav_sections, main_nav) {
     }
   }); // nav_sections.each END
 
-}
+} // END highlightCurrentSectionInNavbar
 
 
 
@@ -91,7 +91,26 @@ function createProjectItem(result) {
   console.log($project_element_link);
 
   $('.projects-grid').append($project_element_link);
-} // END createProjectItems
+} // END createProjectItem
+
+
+
+// Create the "Load More" button, to display more project items
+// when clicked.
+function createTheLoadMoreButton() {
+  // Call the btnloadmore plugin on the .projects-grid container
+  // to create the "Load More" button in the site.
+  $('.projects-grid').btnLoadmore({
+    // How many project items to display on the start.
+    showItem : 6,
+    // How many project items to show when clicked.
+    whenClickBtn : 3,
+    // The text for the load more items button.
+    textBtn : 'Load More',
+    // Apply aditional CSS classes to the load more button.
+    classBtn : 'btn btn-show-all'
+  });
+} // END createTheLoadMoreButton
 
 
 
@@ -123,18 +142,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
       // Create the project item and add it to the website
       createProjectItem(result);
 
-      $('.projects-grid').btnLoadmore({
-
-                   showItem : 6,
-
-                   whenClickBtn : 3,
-
-                   textBtn : 'Load More',
-
-                   classBtn : 'btn btn-show-all'
-
-               });
-
+      // Create the "Load More" button, to display more project items
+      // when clicked.
+      createTheLoadMoreButton();
 
     },
     error: function(xhr, status, error) {
