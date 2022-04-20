@@ -50,12 +50,13 @@ function setCurrentYearInFooter() {
 
 
 // Create the project item and add it to the website
-function createProjectItem(result) {
+// projectsList: an array with all the data of the projects to show.
+function createProjectItem(projectData) {
 
   // Create a <a></a> element with a link to the current project
-  var $project_element_link = $('<a>', {href: result.data[6].link_to_project,
+  var $project_element_link = $('<a>', {href: projectData.link_to_project,
                                         target: "_blank",
-                                        class: "project"});
+                                        class: "project project-tile"});
 
   // create the <div> element that goes inside the <a> element.
   var $portafolio_block_element = $('<div>', {class: "portfolio-block"});
@@ -63,7 +64,7 @@ function createProjectItem(result) {
 
   // create the <img> element, the image for the project.
   var $project_image_element = $('<img>', {class: "project-image",
-                                           src: result.data[6].image_src,
+                                           src: projectData.image_src,
                                            alt: "project"});
   // Add the image to the <div class='portafolio-block'> element.
   $portafolio_block_element.append($project_image_element);
@@ -77,13 +78,14 @@ function createProjectItem(result) {
   $caption_element.append($external_link_icon);
 
   // Create the project description element <p class="project-description">.
-  var $project_description = $('<p>', {class: "project-description", text: result.data[6].project_description});
+  var $project_description = $('<p>', {class: "project-description",
+                                       text: projectData.project_description});
   $caption_element.append($project_description);
 
   // Create the <p class="project-title"> for the project title
   var $project_title_element = $('<p>', {class: "project-title"});
   $project_title_element.append('<span class="code">&#91;</span>');
-  $project_title_element.append(result.data[6].project_title);
+  $project_title_element.append(projectData.project_title);
   $project_title_element.append('<span class="code">&#93;</span>');
   // Append to the project link
   $project_element_link.append($project_title_element);
@@ -140,7 +142,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
       console.table(result.data[6]);
 
       // Create the project item and add it to the website
-      createProjectItem(result);
+      createProjectItem(result.data[6]);
 
       // Create the "Load More" button, to display more project items
       // when clicked.
