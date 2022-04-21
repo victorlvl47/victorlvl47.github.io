@@ -101,25 +101,11 @@ function createProjectTile(projectData) {
 
 // Create the project tiles
 // projectsArrayInfo: an array, a list of objects with the information about the projects.
-// indexToStartFrom: an integer, from what index we start counting from.
-// numberOfProjects: an integer, the number of project tiles we want to create.
-//                   The default value is the length of projectsArrayInfo.
-function createProjectTiles(projectsArrayInfo, indexToStartFrom, numberOfProjects) {
+// indexStart: an integer, from what index we start counting from.
+// indexEnd: an integer, the index where we are going to stop at.
+function createProjectTiles(projectsArrayInfo, indexStart, indexEnd) {
 
-  var projectsArrayLength = projectsArrayInfo.length;
-
-  // The default value for numberOfProjects.
-  // Set numberOfProjects to the lenght of projectsArrayInfo, if numberOfProjects
-  // is not defined or numberOfProjects is greater than the length of
-  // projectsArrayInfo list.
-  if (typeof numberOfProjects === 'undefined' || numberOfProjects > projectsArrayLength)
-  {
-    numberOfProjects = projectsArrayLength
-  }
-
-  var indexWhereWeStop = indexToStartFrom + numberOfProjects
-
-  for (var i = indexToStartFrom; i < indexWhereWeStop; i++) {
+  for (var i = indexStart; i <= indexEnd; i++) {
     createProjectTile(projectsArrayInfo[i]);
   }
 }
@@ -172,7 +158,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
       // console.table(result.data[6]);
 
       // Create all the project tiles from the json file
-      createProjectTiles(result.data, 0);
+      var indexStart = 0;
+      var indexEnd = result.data.length - 1;
+      createProjectTiles(result.data, indexStart, indexEnd);
 
       // Create the "Load More" button, to display more project items
       // when clicked.
