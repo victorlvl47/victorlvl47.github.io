@@ -50,7 +50,7 @@ function setCurrentYearInFooter() {
 
 
 // Create the project item and add it to the website
-// projectsList: an array with all the data of the projects to show.
+// projectData: an object with the data of the current project
 function createProjectTile(projectData) {
 
   // Create a <a></a> element with a link to the current project
@@ -98,6 +98,35 @@ function createProjectTile(projectData) {
 
 
 
+
+// Create the project tiles
+// projectsArrayInfo: an array, a list of objects with the information about the projects.
+// indexToStartFrom: an integer, from what index we start counting from.
+// numberOfProjects: an integer, the number of project tiles we want to create.
+//                   The default value is the length of projectsArrayInfo.
+function createProjectTiles(projectsArrayInfo, indexToStartFrom, numberOfProjects) {
+
+  var projectsArrayLength = projectsArrayInfo.length;
+
+  // The default value for numberOfProjects.
+  // Set numberOfProjects to the lenght of projectsArrayInfo, if numberOfProjects
+  // is not defined or numberOfProjects is greater than the length of
+  // projectsArrayInfo list.
+  if (typeof numberOfProjects === 'undefined' || numberOfProjects > projectsArrayLength)
+  {
+    numberOfProjects = projectsArrayLength
+  }
+
+  var indexWhereWeStop = indexToStartFrom + numberOfProjects
+
+  for (var i = indexToStartFrom; i < indexWhereWeStop; i++) {
+    createProjectTile(projectsArrayInfo[i]);
+  }
+}
+
+
+
+
 // Create the "Load More" button, to display more project items
 // when clicked.
 function createTheLoadMoreButton() {
@@ -142,8 +171,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
       console.log("Success, we got the data about the projects.");
       // console.table(result.data[6]);
 
-      // Create the project item and add it to the website
-      createProjectTile(result.data[6]);
+      // Create all the project tiles from the json file
+      createProjectTiles(result.data, 0);
 
       // Create the "Load More" button, to display more project items
       // when clicked.
