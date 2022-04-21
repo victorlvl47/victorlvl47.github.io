@@ -157,8 +157,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
       console.log("Success, we got the data about the projects.");
       // console.table(result.data[6]);
 
-      // Create all the project tiles from the json file
-      var indexStart = 9;
+      // Create all the project tiles from the json file.
+      var indexStart = 9; // Start from the React Calculator project.
       var indexEnd = result.data.length - 1;
       createProjectTiles(result.data, indexStart, indexEnd);
 
