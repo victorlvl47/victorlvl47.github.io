@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
       // console.table(result.data[6]);
 
       // Create all the project tiles from the json file
-      var indexStart = 0;
+      var indexStart = 9;
       var indexEnd = result.data.length - 1;
       createProjectTiles(result.data, indexStart, indexEnd);
 
