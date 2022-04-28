@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
   // Get the data about the projects from a json file.
   $.ajax({
     dataType: "json",
-    url: "https://res.cloudinary.com/de9fgkkam/raw/upload/v1650288805/personal_portafolio/projects_data_hdiuhg.json",
+    url: "https://res.cloudinary.com/de9fgkkam/raw/upload/v1651151508/personal_portafolio/projects_data_tcs9im.json",
     data: {},
     success: function(result, status, xhr) {
       console.log("Success, we got the data about the projects.");

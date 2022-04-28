@@ -125,6 +125,13 @@
       "project_title": "Hand Gesture as a Control",
       "project_description": "Use hand gestures to control the volume of your computer. Made with MediaPipe and pyalsaaudio.",
       "date": null
+    },
+    {
+      "link_to_project": "https://codepen.io/victorlvl47/full/YzEVyNj",
+      "image_src": "https://res.cloudinary.com/de9fgkkam/image/upload/v1651151455/personal_portafolio/react_business_card_thumbnail_nx7ep7.png",
+      "project_title": "React Business Card",
+      "project_description": "A business card with personal links, made with React.",
+      "date": null
     }
   ]
 }
