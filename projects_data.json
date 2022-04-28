@@ -132,6 +132,13 @@
       "project_title": "React Business Card",
       "project_description": "A business card with personal links, made with React.",
       "date": null
+    },
+    {
+      "link_to_project": "https://codepen.io/victorlvl47/full/NWwXJZY",
+      "image_src": "https://res.cloudinary.com/de9fgkkam/image/upload/v1651152390/personal_portafolio/online_experiences_react_thumbnail_kmviub.png",
+      "project_title": "Experiences Page Concept",
+      "project_description": "A front page concept made with React",
+      "date": null
     }
   ]
 }
