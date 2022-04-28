@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
       // Create all the project tiles from the json file.
       var indexStart = 9; // Start from the React Calculator project.
-      var indexEnd = result.data.length - 1;
+      var indexEnd = result.data.length - 1; // The index of the last project in the array.
       createProjectTiles(result.data, indexStart, indexEnd);
 
       // Create the "Load More" button, to display more project items
