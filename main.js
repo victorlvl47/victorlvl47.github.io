@@ -149,9 +149,10 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
 
   // Get the data about the projects from a json file.
+  const JSON_FILE_URL = "https://res.cloudinary.com/de9fgkkam/raw/upload/v1651152457/personal_portafolio/projects_data_neqc2o.json";
   $.ajax({
     dataType: "json",
-    url: "https://res.cloudinary.com/de9fgkkam/raw/upload/v1651152457/personal_portafolio/projects_data_neqc2o.json",
+    url: JSON_FILE_URL,
     data: {},
     success: function(result, status, xhr) {
       // console.log("Success, we got the data about the projects.");
