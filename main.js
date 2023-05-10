@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
 
   // Get the data about the projects from a json file.
-  const JSON_FILE_URL = "https://res.cloudinary.com/de9fgkkam/raw/upload/v1651152457/personal_portafolio/projects_data_neqc2o.json";
+  const JSON_FILE_URL = "https://res.cloudinary.com/de9fgkkam/raw/upload/v1683755006/projects_data_10_05_2023_c6kwtb.json";
   $.ajax({
     dataType: "json",
     url: JSON_FILE_URL,
