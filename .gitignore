@@ -2,5 +2,5 @@
 *.swp
 *.swo
 
-# ignore the json file with the data about the projects
-projects_data.json
+# ignore vscode
+.vscode/
