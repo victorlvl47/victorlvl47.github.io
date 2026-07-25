@@ -71,6 +71,13 @@
       "date": null
     },
     {
+      "link_to_project": "https://github.com/victorlvl47/field-lead-tracker",
+      "image_src": "https://raw.githubusercontent.com/victorlvl47/field-lead-tracker/main/docs/screenshots/02-lead-list.png",
+      "project_title": "Field Lead Tracker",
+      "project_description": "An offline-first mobile CRM built with React Native and Expo, featuring local SQLite storage, Supabase sync, conflict detection and resolution, testing, and Sentry monitoring.",
+      "date": 2026
+    },
+    {
       "link_to_project": "https://github.com/victorlvl47/HandTrackingDemo",
       "image_src": "https://res.cloudinary.com/de9fgkkam/image/upload/v1629166638/personal_portafolio/hand_tracking_edited_gkfo51.gif",
       "project_title": "CV Hand Tracking",
