@@ -10,10 +10,56 @@ const { contact, image } = Astro.props;
       <h2 id="contact-title">{contact.heading}</h2>
       <p class="contact__intro">{contact.intro}</p>
       <a class="button button--primary" href={`mailto:${contact.email}`}>{contact.emailAction} <span aria-hidden="true">↗</span></a>
-      <a class="contact__email mono" href={`mailto:${contact.email}`}>{contact.email}</a>
+      <div class="contact__email-row">
+        <span class="contact__email mono" data-email-address>{contact.email}</span>
+        <button class="contact__copy-button mono" type="button" data-copy-email hidden aria-label="Copy email address">Copy</button>
+        <span class="contact__copy-status mono" role="status" aria-live="polite" data-copy-status></span>
+      </div>
       <p class="contact__label mono">{contact.linksLabel}</p>
       <ul class="contact__links">{contact.links.map((link) => <li><a href={link.url} target={link.url.startsWith('mailto:') ? undefined : '_blank'} rel={link.url.startsWith('mailto:') ? undefined : 'noopener noreferrer'} aria-label={link.url.startsWith('mailto:') ? link.label : `${link.label} (opens in a new tab)`}>{link.label} <span aria-hidden="true">↗</span></a></li>)}</ul>
     </div>
     <div class="room-image contact__image"><img src={image.url} alt={image.alt} width="1200" height="960" loading="lazy" decoding="async" /></div>
   </div>
 </section>
+
+<script>
+  const copyButton = document.querySelector<HTMLButtonElement>('[data-copy-email]');
+  const email = document.querySelector<HTMLElement>('[data-email-address]');
+  const status = document.querySelector<HTMLElement>('[data-copy-status]');
+
+  if (copyButton && email && status) {
+    copyButton.hidden = false;
+    copyButton.addEventListener('click', async () => {
+      const address = email.textContent?.trim() ?? '';
+      if (!address) return;
+
+      try {
+        if (navigator.clipboard?.writeText) {
+          try {
+            await navigator.clipboard.writeText(address);
+            status.textContent = 'Copied!';
+            return;
+          } catch {
+            // Clipboard access can be unavailable on a phone using a local HTTP address.
+          }
+        }
+
+        const field = document.createElement('textarea');
+        field.value = address;
+        field.style.position = 'fixed';
+        field.style.opacity = '0';
+        document.body.append(field);
+        try {
+          field.focus();
+          field.select();
+          if (!document.execCommand('copy')) throw new Error('Copy failed');
+        } finally {
+          field.remove();
+        }
+        status.textContent = 'Copied!';
+      } catch {
+        status.textContent = 'Could not copy. Select the address to copy it.';
+      }
+    });
+  }
+</script>

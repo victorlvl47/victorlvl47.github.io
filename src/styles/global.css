@@ -77,7 +77,12 @@ h3 { font-size: clamp(1.65rem, 2vw, 2.1rem); margin-bottom: .65rem; }
 .contact { padding-block: clamp(4rem, 7vw, 7rem); }
 .contact__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(3rem, 5vw, 6rem); align-items: start; }
 .contact__intro { color: var(--dust-grey); margin: 1.8rem 0 1.5rem; max-width: 23rem; }
-.contact__email { display: block; width: fit-content; margin-top: 1.1rem; color: var(--warm-cream); font-size: .85rem; overflow-wrap: anywhere; }
+.contact__email-row { display: flex; align-items: center; flex-wrap: wrap; gap: .6rem 1rem; margin-top: 1.1rem; }
+.contact__email { color: var(--warm-cream); font-size: .85rem; overflow-wrap: anywhere; }
+.contact__copy-button { min-height: 36px; padding: .35rem .7rem; border: 1px solid var(--quiet-border); background: transparent; color: var(--exit-mint); font-size: .73rem; cursor: pointer; }
+.contact__copy-button:hover { border-color: var(--exit-mint); background: var(--exit-mint); color: var(--room-black); }
+.contact__copy-button[hidden], .contact__copy-status:empty { display: none; }
+.contact__copy-status { color: var(--exit-mint); font-size: .73rem; }
 .contact__label { margin: 2.4rem 0 1rem; padding-top: 1rem; border-top: 1px solid var(--quiet-border); color: var(--dust-grey); font-size: .74rem; text-transform: uppercase; }
 .contact__links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .65rem; padding: 0; margin: 0; list-style: none; }
 .contact__links a { display: flex; align-items: center; justify-content: space-between; gap: .3rem; min-height: 48px; padding: .7rem .85rem; border: 1px solid var(--quiet-border); font-family: 'DM Mono', Consolas, monospace; font-size: .73rem; text-transform: uppercase; text-decoration: none; }
