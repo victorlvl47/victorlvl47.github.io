@@ -80,7 +80,7 @@ export async function validatePortfolio(raw: unknown): Promise<Portfolio> {
     const at = `projects[${index}]`;
     const source = object(item, at);
     const technologies = array(source.technologies, `${at}.technologies`).map((tech, techIndex) => string(tech, `${at}.technologies[${techIndex}]`));
-    if (!technologies.length) throw new Error(`${at}.technologies needs at least one entry`);
+    // An empty list records a real project whose stack is not yet verified.
     return {
       ...fields(source, ['id', 'title', 'category', 'description'], at), technologies,
       image: await image(source.image, `${at}.image`), projectUrl: url(source.projectUrl, `${at}.projectUrl`)

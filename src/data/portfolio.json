@@ -6,9 +6,18 @@
     "description": "Victor Maldonado is a software developer in Guatemala. Explore selected software projects and ways to get in touch."
   },
   "navigation": [
-    { "label": "About", "href": "#about" },
-    { "label": "Work", "href": "#projects" },
-    { "label": "Contact", "href": "#contact" }
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Work",
+      "href": "#projects"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
   ],
   "hero": {
     "eyebrow": "Level 00 / Entrance",
@@ -16,7 +25,10 @@
     "secondaryAction": "Get in touch",
     "previewLabel": "Selected work",
     "previewText": "Practical tools, experiments, and computer vision demos.",
-    "image": { "url": "/images/placeholders/corridor.svg", "alt": "" }
+    "image": {
+      "url": "/images/placeholders/corridor.svg",
+      "alt": ""
+    }
   },
   "work": {
     "eyebrow": "01 / Selected rooms",
@@ -35,8 +47,15 @@
       "title": "HEIC to PNG Converter",
       "category": "Image utility",
       "description": "A Python script that converts HEIC images in a folder to PNG using pillow-heif and Pillow.",
-      "technologies": ["Python", "pillow-heif", "Pillow"],
-      "image": { "url": "/images/placeholders/project.svg", "alt": "" },
+      "technologies": [
+        "Python",
+        "pillow-heif",
+        "Pillow"
+      ],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
       "projectUrl": "https://github.com/victorlvl47/heic-to-png"
     },
     {
@@ -44,8 +63,15 @@
       "title": "Alt Tags Generator",
       "category": "Accessibility tool",
       "description": "A Python script that uses AWS S3 and Rekognition to generate alternative text for images in a bucket.",
-      "technologies": ["Python", "AWS S3", "AWS Rekognition"],
-      "image": { "url": "/images/placeholders/project.svg", "alt": "" },
+      "technologies": [
+        "Python",
+        "AWS S3",
+        "AWS Rekognition"
+      ],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
       "projectUrl": "https://github.com/victorlvl47/generate-alt-tags"
     },
     {
@@ -53,8 +79,14 @@
       "title": "CV Hand Tracking",
       "category": "Computer vision demo",
       "description": "A webcam hand-tracking demo with related gesture, painting, and finger-counting experiments.",
-      "technologies": ["Python", "MediaPipe"],
-      "image": { "url": "/images/placeholders/project.svg", "alt": "" },
+      "technologies": [
+        "Python",
+        "MediaPipe"
+      ],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
       "projectUrl": "https://github.com/victorlvl47/HandTrackingDemo"
     },
     {
@@ -62,8 +94,14 @@
       "title": "CV Pose Detection",
       "category": "Computer vision demo",
       "description": "A MediaPipe pose detection demo that estimates human poses from video.",
-      "technologies": ["Python", "MediaPipe"],
-      "image": { "url": "/images/placeholders/project.svg", "alt": "" },
+      "technologies": [
+        "Python",
+        "MediaPipe"
+      ],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
       "projectUrl": "https://github.com/victorlvl47/PoseMediaPipeDemo"
     },
     {
@@ -71,8 +109,14 @@
       "title": "CV Face Detection",
       "category": "Computer vision demo",
       "description": "A MediaPipe demo that detects faces in a video file.",
-      "technologies": ["Python", "MediaPipe"],
-      "image": { "url": "/images/placeholders/project.svg", "alt": "" },
+      "technologies": [
+        "Python",
+        "MediaPipe"
+      ],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
       "projectUrl": "https://github.com/victorlvl47/FaceDetectionDemo"
     },
     {
@@ -80,36 +124,243 @@
       "title": "CV Face Mesh",
       "category": "Computer vision demo",
       "description": "A face-mesh demo that processes video with MediaPipe.",
-      "technologies": ["Python", "MediaPipe"],
-      "image": { "url": "/images/placeholders/project.svg", "alt": "" },
+      "technologies": [
+        "Python",
+        "MediaPipe"
+      ],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
       "projectUrl": "https://github.com/victorlvl47/FaceMeshDemo"
     },
     {
-      "id": "cv-paint",
-      "title": "CV Paint Demo",
-      "category": "Computer vision demo",
-      "description": "A drawing demo that uses hand gestures to select colors and tools and move the cursor.",
-      "technologies": ["Python"],
-      "image": { "url": "/images/placeholders/project.svg", "alt": "" },
-      "projectUrl": "https://github.com/victorlvl47/HandTrackingDemo#cv-paint-demo"
+      "id": "medimine-landing-page",
+      "title": "Medimine Landing Page",
+      "category": "Web concept",
+      "description": "A landing page with news and information about how the concept application 'Medimine' works.",
+      "technologies": [],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
+      "projectUrl": "https://codepen.io/victorlvl47/full/QWpVEeE"
+    },
+    {
+      "id": "tribute-page",
+      "title": "Tribute Page",
+      "category": "Tribute page",
+      "description": "Albert Camus tribute page, information about his works and personal life.",
+      "technologies": [],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
+      "projectUrl": "https://codepen.io/victorlvl47/full/JjWKEmE"
+    },
+    {
+      "id": "documentation-page",
+      "title": "Documentation Page",
+      "category": "Documentation",
+      "description": "A documentation page for the javascript language aimed to beginners.",
+      "technologies": [],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
+      "projectUrl": "https://codepen.io/victorlvl47/full/yLMoXOL"
+    },
+    {
+      "id": "survey-form",
+      "title": "Survey Form",
+      "category": "Form",
+      "description": "A Survey Form for Free Code Camp.",
+      "technologies": [],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
+      "projectUrl": "https://codepen.io/victorlvl47/full/bGqBEwQ"
+    },
+    {
+      "id": "yummyy-bears",
+      "title": "Yummyy Bears",
+      "category": "Web concept",
+      "description": "A concept website for a company that sells gummy bears.",
+      "technologies": [],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
+      "projectUrl": "https://codepen.io/victorlvl47/full/XWMRbdm"
+    },
+    {
+      "id": "rushmachine",
+      "title": "RushMachine",
+      "category": "Interactive tool",
+      "description": "A virtual sound board to help you create a catchy beat.",
+      "technologies": [],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
+      "projectUrl": "https://codepen.io/victorlvl47/full/zYwqZeY"
+    },
+    {
+      "id": "random-quote-machine",
+      "title": "Random Quote Machine",
+      "category": "Interactive tool",
+      "description": "A website that generates a random famous quote.",
+      "technologies": [],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
+      "projectUrl": "https://codepen.io/victorlvl47/full/ExmVEap"
+    },
+    {
+      "id": "markdown-online",
+      "title": "Markdown Online",
+      "category": "Editor",
+      "description": "An online Markdown editor and previewer.",
+      "technologies": [],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
+      "projectUrl": "https://codepen.io/victorlvl47/full/poPjWdE"
+    },
+    {
+      "id": "pomodoro-tracker",
+      "title": "Pomodoro Tracker",
+      "category": "Productivity tool",
+      "description": "A pomodoro tracker tool to help you focus on your current task.",
+      "technologies": [],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
+      "projectUrl": "https://codepen.io/victorlvl47/full/NWjRNQJ"
+    },
+    {
+      "id": "react-calculator",
+      "title": "React Calculator",
+      "category": "Calculator",
+      "description": "A mininal calculator made with reactjs with a vintage style.",
+      "technologies": [
+        "React"
+      ],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
+      "projectUrl": "https://codepen.io/victorlvl47/full/WNjQvQN"
+    },
+    {
+      "id": "field-lead-tracker",
+      "title": "Field Lead Tracker",
+      "category": "Mobile CRM",
+      "description": "An offline-first mobile CRM built with React Native and Expo, featuring local SQLite storage, Supabase sync, conflict detection and resolution, testing, and Sentry monitoring.",
+      "technologies": [
+        "React Native",
+        "Expo",
+        "SQLite",
+        "Supabase",
+        "Sentry"
+      ],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
+      "projectUrl": "https://github.com/victorlvl47/field-lead-tracker"
     },
     {
       "id": "trainer-assistant",
       "title": "CV Trainer Assistant",
       "category": "Computer vision demo",
-      "description": "A pose-based trainer assistant demo that reads a video file.",
-      "technologies": ["Python", "MediaPipe"],
-      "image": { "url": "/images/placeholders/project.svg", "alt": "" },
+      "description": "A computer vision trainer assistant demo made possible with the use of MediaPipe and OpenCV.",
+      "technologies": [
+        "Python",
+        "MediaPipe"
+      ],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
       "projectUrl": "https://github.com/victorlvl47/PoseMediaPipeDemo#trainer-assistant-demo"
+    },
+    {
+      "id": "cv-paint",
+      "title": "CV Paint Demo",
+      "category": "Computer vision demo",
+      "description": "A MS Paint like application but you use your hand as the cursor to paint and select colors and tools.",
+      "technologies": [
+        "Python"
+      ],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
+      "projectUrl": "https://github.com/victorlvl47/HandTrackingDemo#cv-paint-demo"
+    },
+    {
+      "id": "cv-mouse",
+      "title": "CV Mouse",
+      "category": "Computer vision demo",
+      "description": "Use your webcam and hand gestures to control your computer's mouse cursor. Made with MediaPipe and OpenCV2.",
+      "technologies": [
+        "Python",
+        "MediaPipe",
+        "OpenCV"
+      ],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
+      "projectUrl": "https://github.com/victorlvl47/cvMouseDemo"
     },
     {
       "id": "hand-gesture-control",
       "title": "Hand Gesture as a Control",
       "category": "Computer vision demo",
-      "description": "A hand-gesture demo that controls computer volume using pyalsaaudio.",
-      "technologies": ["Python", "pyalsaaudio"],
-      "image": { "url": "/images/placeholders/project.svg", "alt": "" },
+      "description": "Use hand gestures to control the volume of your computer. Made with MediaPipe and pyalsaaudio.",
+      "technologies": [
+        "Python",
+        "pyalsaaudio"
+      ],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
       "projectUrl": "https://github.com/victorlvl47/HandTrackingDemo#hand-gesture-as-a-control"
+    },
+    {
+      "id": "experiences-page-concept",
+      "title": "Experiences Page Concept",
+      "category": "Web concept",
+      "description": "A front page concept made with React",
+      "technologies": [
+        "React"
+      ],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
+      "projectUrl": "https://codepen.io/victorlvl47/full/NWwXJZY"
+    },
+    {
+      "id": "react-business-card",
+      "title": "React Business Card",
+      "category": "Web concept",
+      "description": "A business card with personal links, made with React.",
+      "technologies": [
+        "React"
+      ],
+      "image": {
+        "url": "/images/placeholders/project.svg",
+        "alt": ""
+      },
+      "projectUrl": "https://codepen.io/victorlvl47/full/YzEVyNj"
     }
   ],
   "contact": {
@@ -120,13 +371,34 @@
     "emailAction": "Email Victor",
     "linksLabel": "Direct lines",
     "links": [
-      { "label": "Facebook", "url": "https://www.facebook.com/people/Victor-Maldonado/100066405635187/" },
-      { "label": "GitHub", "url": "https://github.com/victorlvl47" },
-      { "label": "X", "url": "https://twitter.com/vctrmm88" },
-      { "label": "Email", "url": "mailto:victor.lvl47@gmail.com" },
-      { "label": "YouTube", "url": "https://www.youtube.com/channel/UCWvGIAg19NdMnAbEBqwLvnA" },
-      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/victor-maldonado-7a613420b/" },
-      { "label": "Reddit", "url": "https://www.reddit.com/user/viclvl47" }
+      {
+        "label": "Facebook",
+        "url": "https://www.facebook.com/people/Victor-Maldonado/100066405635187/"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/victorlvl47"
+      },
+      {
+        "label": "X",
+        "url": "https://twitter.com/vctrmm88"
+      },
+      {
+        "label": "Email",
+        "url": "mailto:victor.lvl47@gmail.com"
+      },
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/channel/UCWvGIAg19NdMnAbEBqwLvnA"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/victor-maldonado-7a613420b/"
+      },
+      {
+        "label": "Reddit",
+        "url": "https://www.reddit.com/user/viclvl47"
+      }
     ]
   },
   "footer": {
@@ -135,6 +407,9 @@
     "quote": "Self-education is, I firmly believe, the only kind of education there is.",
     "quoteAttribution": "Isaac Asimov",
     "topAction": "Back to top",
-    "image": { "url": "/images/placeholders/exit.svg", "alt": "" }
+    "image": {
+      "url": "/images/placeholders/exit.svg",
+      "alt": ""
+    }
   }
 }

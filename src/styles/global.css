@@ -69,6 +69,7 @@ h3 { font-size: clamp(1.65rem, 2vw, 2.1rem); margin-bottom: .65rem; }
 .project-card__technologies { display: flex; flex-wrap: wrap; gap: .4rem .55rem; list-style: none; padding: 0; margin: auto 0 1rem; color: var(--dust-grey); font-size: .69rem; text-transform: uppercase; }
 .project-card__technologies li + li::before { content: '/'; margin-right: .55rem; color: var(--quiet-border); }
 .project-card__link { width: fit-content; color: var(--exit-mint); font-size: .83rem; text-decoration-thickness: 1px; text-underline-offset: .22em; }
+.project-card__body--no-tech .project-card__link { margin-top: auto; }
 .projects__more { display: flex; flex-direction: column; align-items: center; margin-top: 2rem; }
 .projects__more .button { min-width: 200px; }
 .projects__more .button[hidden] { display: none; }

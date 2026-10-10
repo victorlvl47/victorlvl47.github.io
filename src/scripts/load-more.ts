@@ -39,14 +39,17 @@ if (control && grid) {
     card.append(imageWrap);
 
     const body = element('div', 'project-card__body');
+    if (project.technologies.length === 0) body.classList.add('project-card__body--no-tech');
     body.append(element('p', 'project-card__index mono', `${String(number).padStart(3, '0')} /`));
     body.append(element('h3', undefined, project.title));
     body.append(element('p', 'project-card__category mono', project.category));
     body.append(element('p', 'project-card__description', project.description));
-    const tech = element('ul', 'project-card__technologies mono');
-    tech.setAttribute('aria-label', 'Technologies');
-    for (const item of project.technologies) tech.append(element('li', undefined, item));
-    body.append(tech);
+    if (project.technologies.length > 0) {
+      const tech = element('ul', 'project-card__technologies mono');
+      tech.setAttribute('aria-label', 'Technologies');
+      for (const item of project.technologies) tech.append(element('li', undefined, item));
+      body.append(tech);
+    }
     const link = element('a', 'project-card__link mono', `${label('action')} ↗`);
     link.href = project.projectUrl;
     link.target = '_blank';
