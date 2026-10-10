@@ -1,0 +1,19 @@
+---
+import type { Portfolio } from '../lib/portfolio';
+interface Props { contact: Portfolio['contact']; image: Portfolio['footer']['image'] }
+const { contact, image } = Astro.props;
+---
+<section id="contact" class="contact section-rule" aria-labelledby="contact-title">
+  <div class="shell contact__grid">
+    <div class="contact__copy">
+      <p class="eyebrow mono">{contact.eyebrow}</p>
+      <h2 id="contact-title">{contact.heading}</h2>
+      <p class="contact__intro">{contact.intro}</p>
+      <a class="button button--primary" href={`mailto:${contact.email}`}>{contact.emailAction} <span aria-hidden="true">↗</span></a>
+      <a class="contact__email mono" href={`mailto:${contact.email}`}>{contact.email}</a>
+      <p class="contact__label mono">{contact.linksLabel}</p>
+      <ul class="contact__links">{contact.links.map((link) => <li><a href={link.url} target={link.url.startsWith('mailto:') ? undefined : '_blank'} rel={link.url.startsWith('mailto:') ? undefined : 'noopener noreferrer'} aria-label={link.url.startsWith('mailto:') ? link.label : `${link.label} (opens in a new tab)`}>{link.label} <span aria-hidden="true">↗</span></a></li>)}</ul>
+    </div>
+    <div class="room-image contact__image"><img src={image.url} alt={image.alt} width="1200" height="960" loading="lazy" decoding="async" /></div>
+  </div>
+</section>

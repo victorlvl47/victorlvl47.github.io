@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Decorative corridor placeholder">
+  <defs>
+    <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#292d26"/><stop offset="1" stop-color="#1d211c"/></linearGradient>
+    <linearGradient id="floor" x2="0" y2="1"><stop stop-color="#34352a"/><stop offset="1" stop-color="#755b32"/></linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="#1d1e19"/>
+  <path d="M0 0h1200L720 350H480Z" fill="#303228"/>
+  <path d="M0 0 480 350v250L0 900Z" fill="url(#wall)"/>
+  <path d="M1200 0 720 350v250l480 300Z" fill="url(#wall)"/>
+  <path d="M0 900 480 600h240l480 300Z" fill="url(#floor)"/>
+  <path d="M480 350h240v250H480Z" fill="#111210" stroke="#5b5c50" stroke-width="3"/>
+  <path d="M555 414h90v186h-90Z" fill="#1d1e19" stroke="#5b5c50" stroke-width="3"/>
+  <path d="M556 395h88v17h-88Z" fill="#8fd8ab"/>
+  <path d="M0 0 480 350v250L0 900M1200 0 720 350v250l480 300M0 300h240l240 100m720-100H960L720 400M0 600h240l240-100m720 100H960L720 500M120 90v720M280 205v506M400 292v333M1080 90v720M920 205v506M800 292v333" fill="none" stroke="#5b5c50" stroke-width="3" stroke-opacity=".65"/>
+  <path d="M380 38h440l-105 78H485ZM460 155h280l-64 48H524Z" fill="#f2ece0" fill-opacity=".11" stroke="#8a7033" stroke-opacity=".6" stroke-width="3"/>
+  <rect width="1200" height="900" fill="none" stroke="#5b5c50" stroke-width="3"/>
+  <text x="600" y="855" text-anchor="middle" fill="#b8b5a8" font-family="monospace" font-size="17" letter-spacing="3">CORRIDOR ARTWORK / PENDING</text>
+</svg>

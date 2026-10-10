@@ -4,3 +4,8 @@
 
 # ignore vscode
 .vscode/
+
+node_modules/
+dist/
+.astro/
+.npm-cache/

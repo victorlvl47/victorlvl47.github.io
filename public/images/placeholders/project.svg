@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Decorative project image placeholder">
+  <rect width="800" height="450" fill="#272b25"/>
+  <path d="M0 1h800M0 449h800M1 0v450M799 0v450" fill="none" stroke="#5b5c50" stroke-width="2"/>
+  <path d="M0 90h800M0 180h800M0 270h800M0 360h800M160 0v450M320 0v450M480 0v450M640 0v450" stroke="#5b5c50" stroke-opacity=".16"/>
+  <path d="M336 238h128M336 251h91" stroke="#8fd8ab" stroke-opacity=".55" stroke-width="2"/>
+  <circle cx="326" cy="245" r="3" fill="#8fd8ab"/>
+  <text x="400" y="213" text-anchor="middle" fill="#b8b5a8" font-family="monospace" font-size="13" letter-spacing="3">PROJECT IMAGE / PENDING</text>
+</svg>
