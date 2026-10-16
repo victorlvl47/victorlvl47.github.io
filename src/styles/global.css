@@ -51,7 +51,7 @@ h3 { font-size: clamp(1.65rem, 2vw, 2.1rem); margin-bottom: .65rem; }
 .hero__role { font-size: .92rem; color: var(--warm-cream); margin-bottom: .8rem; }
 .hero__tagline { color: var(--dust-grey); font-size: clamp(1.05rem, 1.5vw, 1.35rem); margin-bottom: 2rem; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: .8rem; }
-.hero__preview { display: none; }
+.hero__preview { margin-top: clamp(2.2rem, 3vw, 3.25rem); padding-top: 1rem; max-width: 24rem; border-top: 1px solid var(--quiet-border); }
 .hero__preview span { color: var(--exit-mint); font-size: .74rem; text-transform: uppercase; }
 .hero__preview p { margin: .5rem 0 0; color: var(--dust-grey); font-size: .9rem; }
 .room-image { overflow: hidden; border: 1px solid var(--quiet-border); background: var(--shadow-surface); }
