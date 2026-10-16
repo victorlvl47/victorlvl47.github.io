@@ -31,7 +31,7 @@ h3 { font-size: clamp(1.65rem, 2vw, 2.1rem); margin-bottom: .65rem; }
 .eyebrow { color: var(--exit-mint); text-transform: uppercase; font-size: .76rem; letter-spacing: .08em; margin-bottom: 1.7rem; }
 .skip-link { position: absolute; z-index: 10; top: -100px; left: 20px; padding: .8rem 1rem; background: var(--exit-mint); color: var(--room-black); }
 .skip-link:focus { top: 12px; }
-.site-header { min-height: 80px; }
+.site-header { position: absolute; z-index: 2; top: 0; left: 0; width: 100%; min-height: 80px; border-bottom: 1px solid rgba(91, 92, 80, .5); background: rgba(17, 18, 16, .24); }
 .site-header__inner { display: flex; align-items: center; gap: 4rem; min-height: 80px; }
 .site-mark { font-weight: 700; font-size: 1.5rem; white-space: nowrap; text-decoration: none; letter-spacing: -.07em; }
 .site-header nav ul { display: flex; list-style: none; padding: 0; margin: 0; gap: 2.4rem; }
@@ -44,7 +44,7 @@ h3 { font-size: clamp(1.65rem, 2vw, 2.1rem); margin-bottom: .65rem; }
 .button--primary { background: var(--exit-mint); border-color: var(--exit-mint); color: var(--room-black); }
 .button--primary:hover { background: var(--fluorescent-warmth); border-color: var(--fluorescent-warmth); }
 .button:disabled { cursor: wait; opacity: .7; }
-.hero { position: relative; isolation: isolate; min-height: 500px; padding-block: clamp(3.25rem, 4vw, 4.5rem); overflow: hidden; background: var(--room-black); }
+.hero { position: relative; isolation: isolate; min-height: 580px; padding: calc(80px + clamp(3.25rem, 4vw, 4.5rem)) 0 clamp(3.25rem, 4vw, 4.5rem); overflow: hidden; background: var(--room-black); }
 .hero::after { position: absolute; z-index: -1; inset: 0; content: ''; pointer-events: none; background: linear-gradient(90deg, rgba(17, 18, 16, .84) 0%, rgba(17, 18, 16, .62) 31%, rgba(17, 18, 16, .14) 62%, rgba(17, 18, 16, 0) 100%); }
 .hero__inner { position: relative; z-index: 1; display: flex; align-items: center; min-height: 100%; }
 .hero__copy { width: min(100%, 35rem); will-change: transform; }
@@ -106,6 +106,7 @@ h3 { font-size: clamp(1.65rem, 2vw, 2.1rem); margin-bottom: .65rem; }
 }
 @media (max-width: 700px) {
   .shell { width: calc(100% - 40px); }
+  .site-header { position: relative; width: auto; min-height: 64px; border-bottom: 0; background: var(--room-black); }
   .site-header, .site-header__inner { min-height: 64px; }
   .site-header__inner { gap: 1.4rem; }
   .site-header nav ul { gap: .85rem; }
