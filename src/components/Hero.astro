@@ -4,7 +4,10 @@ interface Props { site: Portfolio['site']; hero: Portfolio['hero']; projectCount
 const { site, hero, projectCount } = Astro.props;
 ---
 <section id="about" class="hero section-rule" aria-labelledby="hero-title" data-hero-parallax>
-  <div class="shell hero__grid">
+  <div class="room-image hero__image" aria-hidden="true">
+    <img data-hero-parallax-artwork src={hero.image.url} alt={hero.image.alt} width="1920" height="1080" decoding="async" fetchpriority="high" />
+  </div>
+  <div class="shell hero__inner">
     <div class="hero__copy" data-hero-parallax-copy>
       <p class="eyebrow mono">{hero.eyebrow}</p>
       <h1 id="hero-title">{site.name}</h1>
@@ -12,9 +15,6 @@ const { site, hero, projectCount } = Astro.props;
       <p class="hero__tagline">{site.tagline}</p>
       <div class="hero__actions"><a class="button button--primary" href="#projects">{hero.primaryAction} <span aria-hidden="true">→</span></a><a class="button button--ghost" href="#contact">{hero.secondaryAction}</a></div>
       <div class="hero__preview"><span class="mono">{hero.previewLabel} / {String(projectCount).padStart(2, '0')}</span><p>{hero.previewText}</p></div>
-    </div>
-    <div class="room-image hero__image">
-      <img data-hero-parallax-artwork src={hero.image.url} alt={hero.image.alt} width="1200" height="900" decoding="async" fetchpriority="high" />
     </div>
   </div>
 </section>

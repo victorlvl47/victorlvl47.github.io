@@ -22,7 +22,7 @@ button { font: inherit; }
 img { display: block; max-width: 100%; }
 h1, h2, h3, p, blockquote { margin-top: 0; }
 h1, h2, h3 { font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; line-height: .96; letter-spacing: -.025em; }
-h1 { font-size: clamp(5rem, 8.4vw, 8.4rem); max-width: 7ch; margin-bottom: 1.5rem; }
+h1 { font-size: clamp(4.5rem, 7vw, 7rem); max-width: 7ch; margin-bottom: 1.5rem; }
 h2 { font-size: clamp(3.8rem, 6vw, 6.3rem); margin-bottom: 0; }
 h3 { font-size: clamp(1.65rem, 2vw, 2.1rem); margin-bottom: .65rem; }
 .mono { font-family: 'DM Mono', Consolas, monospace; }
@@ -44,18 +44,20 @@ h3 { font-size: clamp(1.65rem, 2vw, 2.1rem); margin-bottom: .65rem; }
 .button--primary { background: var(--exit-mint); border-color: var(--exit-mint); color: var(--room-black); }
 .button--primary:hover { background: var(--fluorescent-warmth); border-color: var(--fluorescent-warmth); }
 .button:disabled { cursor: wait; opacity: .7; }
-.hero { padding-block: clamp(4rem, 6vw, 7rem); }
-.hero__grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: clamp(3rem, 5vw, 6rem); align-items: center; }
-.hero__copy { will-change: transform; }
+.hero { position: relative; isolation: isolate; min-height: 500px; padding-block: clamp(3.25rem, 4vw, 4.5rem); overflow: hidden; background: var(--room-black); }
+.hero::after { position: absolute; z-index: -1; inset: 0; content: ''; pointer-events: none; background: linear-gradient(90deg, rgba(17, 18, 16, .84) 0%, rgba(17, 18, 16, .62) 31%, rgba(17, 18, 16, .14) 62%, rgba(17, 18, 16, 0) 100%); }
+.hero__inner { position: relative; z-index: 1; display: flex; align-items: center; min-height: 100%; }
+.hero__copy { width: min(100%, 35rem); will-change: transform; }
 .hero__role { font-size: .92rem; color: var(--warm-cream); margin-bottom: .8rem; }
 .hero__tagline { color: var(--dust-grey); font-size: clamp(1.05rem, 1.5vw, 1.35rem); margin-bottom: 2rem; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: .8rem; }
-.hero__preview { margin-top: clamp(3rem, 5vw, 5.2rem); padding-top: 1rem; max-width: 24rem; border-top: 1px solid var(--quiet-border); }
+.hero__preview { display: none; }
 .hero__preview span { color: var(--exit-mint); font-size: .74rem; text-transform: uppercase; }
 .hero__preview p { margin: .5rem 0 0; color: var(--dust-grey); font-size: .9rem; }
 .room-image { overflow: hidden; border: 1px solid var(--quiet-border); background: var(--shadow-surface); }
 .room-image img { width: 100%; height: 100%; object-fit: cover; }
-.hero__image { aspect-ratio: 4 / 3; }
+.hero__image { position: absolute; z-index: -2; inset: 0 0 0 auto; width: 86vw; height: 100%; border: 0; background: var(--room-black); pointer-events: none; }
+.hero__image img { object-position: center; }
 .hero--parallax-active .hero__image img { transform: translate3d(0, 0, 0) scale(1.09); will-change: transform; }
 .projects { padding-block: clamp(4rem, 7vw, 7rem); }
 .projects__heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 2rem; }
@@ -109,12 +111,15 @@ h3 { font-size: clamp(1.65rem, 2vw, 2.1rem); margin-bottom: .65rem; }
   .site-header nav ul { gap: .85rem; }
   .site-header nav a { font-size: .64rem; }
   .header-location { display: none; }
-  .hero__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .hero { min-height: 0; padding-block: 4rem; overflow: visible; }
+  .hero::after { display: none; }
+  .hero__inner { display: block; }
+  .hero__copy { width: auto; }
   h1 { font-size: clamp(4.2rem, 15vw, 6rem); }
   .hero__actions { flex-direction: column; }
   .hero__actions .button { width: 100%; }
-  .hero__preview { margin-top: 2.2rem; }
-  .hero__image { aspect-ratio: 7 / 6; }
+  .hero__preview { display: block; margin-top: 2.2rem; padding-top: 1rem; max-width: 24rem; border-top: 1px solid var(--quiet-border); }
+  .hero__image { position: relative; z-index: auto; inset: auto; width: auto; height: auto; aspect-ratio: 7 / 6; margin-top: 2.5rem; border: 1px solid var(--quiet-border); }
   .projects__heading { display: block; }
   .projects__heading p { margin-top: 1rem; }
   .project-grid { grid-template-columns: 1fr; gap: 16px; }
