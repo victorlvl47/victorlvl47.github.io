@@ -55,6 +55,8 @@ h3 { font-size: clamp(1.65rem, 2vw, 2.1rem); margin-bottom: .65rem; }
 .hero__preview { margin-top: clamp(2.2rem, 3vw, 3.25rem); padding-top: 1rem; max-width: 24rem; border-top: 1px solid var(--quiet-border); }
 .hero__preview span { color: var(--exit-mint); font-size: .74rem; text-transform: uppercase; }
 .hero__preview p { margin: .5rem 0 0; color: var(--dust-grey); font-size: .9rem; }
+.hero__preview-link { display: inline-block; margin-top: .75rem; color: var(--warm-cream); font-size: .74rem; text-decoration-color: var(--exit-mint); text-decoration-thickness: 1px; text-underline-offset: .28em; }
+.hero__preview-link:hover { color: var(--exit-mint); }
 .room-image { overflow: hidden; border: 1px solid var(--quiet-border); background: var(--shadow-surface); }
 .room-image picture, .room-image img { display: block; width: 100%; height: 100%; }
 .room-image img { object-fit: cover; }

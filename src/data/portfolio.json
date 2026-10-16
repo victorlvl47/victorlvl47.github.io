@@ -23,8 +23,10 @@
     "eyebrow": "Level 00 / Entrance",
     "primaryAction": "Explore projects",
     "secondaryAction": "Get in touch",
-    "previewLabel": "Selected work",
-    "previewText": "Practical tools, experiments, and computer vision demos.",
+    "previewLabel": "Theme / The Backrooms",
+    "previewText": "This site takes inspiration from The Backrooms.",
+    "previewLinkLabel": "What are The Backrooms?",
+    "previewLinkUrl": "https://en.wikipedia.org/wiki/The_Backrooms",
     "image": {
       "url": "/images/placeholders/corridor-hero.png",
       "alt": ""
