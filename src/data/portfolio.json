@@ -55,8 +55,8 @@
         "Pillow"
       ],
       "image": {
-        "url": "/images/placeholders/project.svg",
-        "alt": ""
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1683264900/heic-to-png_faxmdx.png",
+        "alt": "Screenshot of the HEIC to PNG Converter running in a terminal"
       },
       "projectUrl": "https://github.com/victorlvl47/heic-to-png"
     },
@@ -71,8 +71,8 @@
         "AWS Rekognition"
       ],
       "image": {
-        "url": "/images/placeholders/project.svg",
-        "alt": ""
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1683754805/Generate_alt_tags_tkn0f4.png",
+        "alt": "Screenshot showing generated alternative tags for a school of fish image"
       },
       "projectUrl": "https://github.com/victorlvl47/generate-alt-tags"
     },
@@ -86,8 +86,8 @@
         "MediaPipe"
       ],
       "image": {
-        "url": "/images/placeholders/project.svg",
-        "alt": ""
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1629166638/personal_portafolio/hand_tracking_edited_gkfo51.gif",
+        "alt": "Hand tracking demo thumbnail"
       },
       "projectUrl": "https://github.com/victorlvl47/HandTrackingDemo"
     },
@@ -101,8 +101,8 @@
         "MediaPipe"
       ],
       "image": {
-        "url": "/images/placeholders/project.svg",
-        "alt": ""
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1629851922/personal_portafolio/pose_detection_thumbnail_xrmzpt.gif",
+        "alt": "Pose detection demo thumbnail"
       },
       "projectUrl": "https://github.com/victorlvl47/PoseMediaPipeDemo"
     },
@@ -116,7 +116,7 @@
         "MediaPipe"
       ],
       "image": {
-        "url": "/images/placeholders/project.svg",
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1629872392/personal_portafolio/faceDetectionThumbnail_jgxcme.png",
         "alt": ""
       },
       "projectUrl": "https://github.com/victorlvl47/FaceDetectionDemo"
@@ -131,7 +131,7 @@
         "MediaPipe"
       ],
       "image": {
-        "url": "/images/placeholders/project.svg",
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1629946834/personal_portafolio/faceMeshDemoThumbnail_ihemwl.png",
         "alt": ""
       },
       "projectUrl": "https://github.com/victorlvl47/FaceMeshDemo"
@@ -143,7 +143,7 @@
       "description": "A landing page with news and information about how the concept application 'Medimine' works.",
       "technologies": [],
       "image": {
-        "url": "/images/placeholders/project.svg",
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1626050617/personal_portafolio/medimine_thumbnail_tfrpqw.png",
         "alt": ""
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/QWpVEeE"
@@ -155,7 +155,7 @@
       "description": "Albert Camus tribute page, information about his works and personal life.",
       "technologies": [],
       "image": {
-        "url": "/images/placeholders/project.svg",
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1622617496/personal_portafolio/tribute_albert_camus_qukvly.png",
         "alt": ""
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/JjWKEmE"
@@ -167,7 +167,7 @@
       "description": "A documentation page for the javascript language aimed to beginners.",
       "technologies": [],
       "image": {
-        "url": "/images/placeholders/project.svg",
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1622619793/personal_portafolio/js_docs_croped_yk6idv.png",
         "alt": ""
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/yLMoXOL"
@@ -179,7 +179,7 @@
       "description": "A Survey Form for Free Code Camp.",
       "technologies": [],
       "image": {
-        "url": "/images/placeholders/project.svg",
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1622660333/personal_portafolio/survey_form_fcc_khv41w.png",
         "alt": ""
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/bGqBEwQ"
@@ -191,7 +191,7 @@
       "description": "A concept website for a company that sells gummy bears.",
       "technologies": [],
       "image": {
-        "url": "/images/placeholders/project.svg",
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1622661087/personal_portafolio/yummyy_bears_concept_mkcxsc.png",
         "alt": ""
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/XWMRbdm"
@@ -203,7 +203,7 @@
       "description": "A virtual sound board to help you create a catchy beat.",
       "technologies": [],
       "image": {
-        "url": "/images/placeholders/project.svg",
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1626047808/personal_portafolio/rushmachine_thumbnail_yy4tb5.png",
         "alt": ""
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/zYwqZeY"
@@ -215,7 +215,7 @@
       "description": "A website that generates a random famous quote.",
       "technologies": [],
       "image": {
-        "url": "/images/placeholders/project.svg",
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1626045606/personal_portafolio/random_quote_generator_thumbnail_xccpq0.png",
         "alt": ""
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/ExmVEap"
@@ -227,7 +227,7 @@
       "description": "An online Markdown editor and previewer.",
       "technologies": [],
       "image": {
-        "url": "/images/placeholders/project.svg",
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1626046188/personal_portafolio/markdow_previewer_thumbnail_n9wdq1.png",
         "alt": ""
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/poPjWdE"
@@ -239,7 +239,7 @@
       "description": "A pomodoro tracker tool to help you focus on your current task.",
       "technologies": [],
       "image": {
-        "url": "/images/placeholders/project.svg",
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1626047083/personal_portafolio/pomodoro_thumbnail_oukgsa.png",
         "alt": ""
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/NWjRNQJ"
@@ -253,7 +253,7 @@
         "React"
       ],
       "image": {
-        "url": "/images/placeholders/project.svg",
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1626048572/personal_portafolio/reactcalculator_thumbnail_scca1b.png",
         "alt": ""
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/WNjQvQN"
@@ -271,7 +271,7 @@
         "Sentry"
       ],
       "image": {
-        "url": "/images/placeholders/project.svg",
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1785026434/personal_portafolio/field_lead_tracker_thumbnail_r1vz7f.png",
         "alt": ""
       },
       "projectUrl": "https://github.com/victorlvl47/field-lead-tracker"
@@ -286,8 +286,8 @@
         "MediaPipe"
       ],
       "image": {
-        "url": "/images/placeholders/project.svg",
-        "alt": ""
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1630377782/personal_portafolio/CVTrainerAssistantThumbnail_o80vwc.png",
+        "alt": "Trainer assistant pose tracking demo thumbnail"
       },
       "projectUrl": "https://github.com/victorlvl47/PoseMediaPipeDemo#trainer-assistant-demo"
     },
@@ -300,8 +300,8 @@
         "Python"
       ],
       "image": {
-        "url": "/images/placeholders/project.svg",
-        "alt": ""
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1630638240/personal_portafolio/cv_paint_thumbnail_edited_rh0mne.png",
+        "alt": "CV Paint hand tracking demo thumbnail"
       },
       "projectUrl": "https://github.com/victorlvl47/HandTrackingDemo#cv-paint-demo"
     },
@@ -316,7 +316,7 @@
         "OpenCV"
       ],
       "image": {
-        "url": "/images/placeholders/project.svg",
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1630640289/personal_portafolio/cvMouse_thumbnail_edited_ouftto.png",
         "alt": ""
       },
       "projectUrl": "https://github.com/victorlvl47/cvMouseDemo"
@@ -331,8 +331,8 @@
         "pyalsaaudio"
       ],
       "image": {
-        "url": "/images/placeholders/project.svg",
-        "alt": ""
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1630640666/personal_portafolio/hand_gesture_as_a_control_thumbnail_edited_y5hviz.png",
+        "alt": "Hand gesture volume-control demo thumbnail"
       },
       "projectUrl": "https://github.com/victorlvl47/HandTrackingDemo#hand-gesture-as-a-control"
     },
@@ -345,7 +345,7 @@
         "React"
       ],
       "image": {
-        "url": "/images/placeholders/project.svg",
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1651152390/personal_portafolio/online_experiences_react_thumbnail_kmviub.png",
         "alt": ""
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/NWwXJZY"
@@ -359,7 +359,7 @@
         "React"
       ],
       "image": {
-        "url": "/images/placeholders/project.svg",
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1651151455/personal_portafolio/react_business_card_thumbnail_nx7ep7.png",
         "alt": ""
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/YzEVyNj"

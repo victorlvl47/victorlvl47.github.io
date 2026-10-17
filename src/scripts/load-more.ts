@@ -68,7 +68,7 @@ if (control && grid) {
     status.textContent = label('loadingLabel');
     try {
       if (!remaining) {
-        const response = await fetch(control.dataset.url!, { headers: { Accept: 'application/json' } });
+        const response = await fetch(control.dataset.url!, { headers: { Accept: 'application/json' }, cache: 'no-store' });
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const payload: unknown = await response.json();
         if (!payload || typeof payload !== 'object' || !('projects' in payload) || !Array.isArray(payload.projects) || payload.projects.length !== total - initialCount) throw new Error('Unexpected project data');
