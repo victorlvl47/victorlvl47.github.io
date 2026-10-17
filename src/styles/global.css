@@ -143,10 +143,10 @@ h3 { font-size: clamp(1.65rem, 2vw, 2.1rem); margin-bottom: .65rem; }
   .project-grid { grid-template-columns: 1fr; gap: 16px; }
   .contact__copy-button, .contact__links a { background: rgba(17, 18, 16, .72); border-color: rgba(91, 92, 80, .9); }
   .contact__links { grid-template-columns: 1fr; }
-  .site-footer__grid { grid-template-columns: 1fr auto; gap: 2rem 1rem; }
+  .site-footer__grid { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
   .site-footer__identity { padding-right: 0; }
-  .site-footer__quote { grid-column: 1 / -1; grid-row: 2; padding: 1.5rem 0 0; border-inline: 0; border-top: 1px solid var(--quiet-border); }
-  .site-footer__meta { align-self: start; padding-left: 0; }
+  .site-footer__quote { padding: 1.5rem 0 0; border-inline: 0; border-top: 1px solid var(--quiet-border); }
+  .site-footer__meta { align-items: center; padding-left: 0; text-align: center; }
 }
 @media (max-width: 340px) {
   .site-header__inner { gap: .75rem; }
