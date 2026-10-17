@@ -1,10 +1,13 @@
-const hero = document.querySelector<HTMLElement>('[data-hero-parallax]');
-const copy = hero?.querySelector<HTMLElement>('[data-hero-parallax-copy]');
-const artwork = hero?.querySelector<HTMLElement>('[data-hero-parallax-artwork]');
 const canHover = window.matchMedia('(hover: hover) and (pointer: fine)');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-if (hero && copy && artwork) {
+document.querySelectorAll<HTMLElement>('[data-parallax-section]').forEach((section) => {
+  const copy = section.querySelector<HTMLElement>('[data-parallax-copy]');
+  const artwork = section.querySelector<HTMLElement>('[data-parallax-artwork]');
+  const activeClass = section.classList.contains('hero') ? 'hero--parallax-active' : 'contact--parallax-active';
+
+  if (!copy || !artwork) return;
+
   let frame = 0;
   let targetX = 0;
   let targetY = 0;
@@ -33,7 +36,7 @@ if (hero && copy && artwork) {
   };
 
   const onPointerMove = (event: PointerEvent) => {
-    const bounds = hero.getBoundingClientRect();
+    const bounds = section.getBoundingClientRect();
     targetX = Math.max(-1, Math.min(1, ((event.clientX - bounds.left) / bounds.width) * 2 - 1));
     targetY = Math.max(-1, Math.min(1, ((event.clientY - bounds.top) / bounds.height) * 2 - 1));
     requestRender();
@@ -55,20 +58,20 @@ if (hero && copy && artwork) {
 
   const disable = () => {
     if (enabled) {
-      hero.removeEventListener('pointermove', onPointerMove);
-      hero.removeEventListener('pointerleave', reset);
+      section.removeEventListener('pointermove', onPointerMove);
+      section.removeEventListener('pointerleave', reset);
       enabled = false;
     }
-    hero.classList.remove('hero--parallax-active');
+    section.classList.remove(activeClass);
     resetStyles();
   };
 
   const enable = () => {
     if (enabled || !canHover.matches || reducedMotion.matches) return;
     enabled = true;
-    hero.classList.add('hero--parallax-active');
-    hero.addEventListener('pointermove', onPointerMove, { passive: true });
-    hero.addEventListener('pointerleave', reset, { passive: true });
+    section.classList.add(activeClass);
+    section.addEventListener('pointermove', onPointerMove, { passive: true });
+    section.addEventListener('pointerleave', reset, { passive: true });
   };
 
   const updateCapability = () => {
@@ -85,4 +88,4 @@ if (hero && copy && artwork) {
     canHover.removeEventListener('change', updateCapability);
     reducedMotion.removeEventListener('change', updateCapability);
   }, { once: true });
-}
+});
