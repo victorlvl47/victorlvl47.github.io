@@ -14,7 +14,7 @@ export interface Project {
 export interface Portfolio {
   site: { name: string; role: string; tagline: string; description: string };
   navigation: { label: string; href: string }[];
-  hero: { eyebrow: string; primaryAction: string; secondaryAction: string; previewLabel: string; previewText: string; image: ImageContent };
+  hero: { eyebrow: string; primaryAction: string; secondaryAction: string; previewLabel: string; previewText: string; previewLinkLabel: string; previewLinkUrl: string; image: ImageContent };
   work: { eyebrow: string; heading: string; intro: string; projectAction: string; loadAction: string; loadingAction: string; retryAction: string; loadError: string; endMessage: string };
   projects: Project[];
   contact: { eyebrow: string; heading: string; intro: string; email: string; emailAction: string; linksLabel: string; links: { label: string; url: string }[] };
@@ -74,7 +74,7 @@ export async function validatePortfolio(raw: unknown): Promise<Portfolio> {
     return { label: string(source.label, `navigation[${index}].label`), href };
   });
   const heroSource = object(data.hero, 'hero');
-  const hero = { ...fields(heroSource, ['eyebrow', 'primaryAction', 'secondaryAction', 'previewLabel', 'previewText'], 'hero'), image: await image(heroSource.image, 'hero.image') } as Portfolio['hero'];
+  const hero = { ...fields(heroSource, ['eyebrow', 'primaryAction', 'secondaryAction', 'previewLabel', 'previewText', 'previewLinkLabel'], 'hero'), previewLinkUrl: url(heroSource.previewLinkUrl, 'hero.previewLinkUrl'), image: await image(heroSource.image, 'hero.image') } as Portfolio['hero'];
   const work = fields(object(data.work, 'work'), ['eyebrow', 'heading', 'intro', 'projectAction', 'loadAction', 'loadingAction', 'retryAction', 'loadError', 'endMessage'], 'work') as Portfolio['work'];
   const projects = await Promise.all(array(data.projects, 'projects').map(async (item, index) => {
     const at = `projects[${index}]`;
