@@ -1,10 +1,21 @@
 ---
 import type { Portfolio } from '../lib/portfolio';
-interface Props { contact: Portfolio['contact']; image: Portfolio['footer']['image'] }
-const { contact, image } = Astro.props;
+import { Icon } from 'astro-icon/components';
+interface Props { contact: Portfolio['contact']; backgroundImage: Portfolio['hero']['image'] }
+const { contact, backgroundImage } = Astro.props;
+const socialIcons: Record<string, string> = {
+  Facebook: 'simple-icons:facebook',
+  Email: 'email',
+  GitHub: 'simple-icons:github',
+  X: 'simple-icons:x',
+  YouTube: 'simple-icons:youtube',
+  LinkedIn: 'simple-icons:linkedin',
+  Reddit: 'simple-icons:reddit'
+};
 ---
-<section id="contact" class="contact section-rule" aria-labelledby="contact-title">
-  <div class="shell contact__grid">
+<section id="contact" class="contact section-rule" aria-labelledby="contact-title" data-parallax-section>
+  <div class="contact__background" aria-hidden="true"><picture><source media="(max-width: 700px)" srcset="/images/placeholders/corridor-hero-mobile.png" width="1122" height="1402" /><img data-parallax-artwork src={backgroundImage.url} alt="" width="1920" height="1080" loading="lazy" decoding="async" /></picture></div>
+  <div class="shell contact__grid" data-parallax-copy>
     <div class="contact__copy">
       <p class="eyebrow mono">{contact.eyebrow}</p>
       <h2 id="contact-title">{contact.heading}</h2>
@@ -16,9 +27,8 @@ const { contact, image } = Astro.props;
         <span class="contact__copy-status mono" role="status" aria-live="polite" data-copy-status></span>
       </div>
       <p class="contact__label mono">{contact.linksLabel}</p>
-      <ul class="contact__links">{contact.links.map((link) => <li><a href={link.url} target={link.url.startsWith('mailto:') ? undefined : '_blank'} rel={link.url.startsWith('mailto:') ? undefined : 'noopener noreferrer'} aria-label={link.url.startsWith('mailto:') ? link.label : `${link.label} (opens in a new tab)`}>{link.label} <span aria-hidden="true">↗</span></a></li>)}</ul>
+      <ul class="contact__links">{contact.links.map((link) => <li><a href={link.url} target={link.url.startsWith('mailto:') ? undefined : '_blank'} rel={link.url.startsWith('mailto:') ? undefined : 'noopener noreferrer'} aria-label={link.url.startsWith('mailto:') ? link.label : `${link.label} (opens in a new tab)`}><span class="contact__link-content">{socialIcons[link.label] && <Icon name={socialIcons[link.label]} class="contact__social-icon" aria-hidden="true" />}<span>{link.label}</span></span><span aria-hidden="true">↗</span></a></li>)}</ul>
     </div>
-    <div class="room-image contact__image"><img src={image.url} alt={image.alt} width="1200" height="960" loading="lazy" decoding="async" /></div>
   </div>
 </section>
 

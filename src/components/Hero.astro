@@ -3,15 +3,15 @@ import type { Portfolio } from '../lib/portfolio';
 interface Props { site: Portfolio['site']; hero: Portfolio['hero'] }
 const { site, hero } = Astro.props;
 ---
-<section id="about" class="hero section-rule" aria-labelledby="hero-title" data-hero-parallax>
+<section id="about" class="hero section-rule" aria-labelledby="hero-title" data-parallax-section>
   <div class="room-image hero__image" aria-hidden="true">
     <picture>
       <source media="(max-width: 700px)" srcset="/images/placeholders/corridor-hero-mobile.png" width="1122" height="1402" />
-      <img data-hero-parallax-artwork src={hero.image.url} alt={hero.image.alt} width="1920" height="1080" decoding="async" fetchpriority="high" />
+      <img data-parallax-artwork src={hero.image.url} alt={hero.image.alt} width="1920" height="1080" decoding="async" fetchpriority="high" />
     </picture>
   </div>
   <div class="shell hero__inner">
-    <div class="hero__copy" data-hero-parallax-copy>
+    <div class="hero__copy" data-parallax-copy>
       <p class="eyebrow mono">{hero.eyebrow}</p>
       <h1 id="hero-title">{site.name}</h1>
       <p class="hero__role mono">{site.role}</p>
