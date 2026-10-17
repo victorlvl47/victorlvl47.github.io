@@ -133,6 +133,7 @@ h3 { font-size: clamp(1.65rem, 2vw, 2.1rem); margin-bottom: .65rem; }
   .projects__heading { display: block; }
   .projects__heading p { margin-top: 1rem; }
   .project-grid { grid-template-columns: 1fr; gap: 16px; }
+  .contact__copy-button, .contact__links a { background: rgba(17, 18, 16, .72); border-color: rgba(91, 92, 80, .9); }
   .contact__links { grid-template-columns: 1fr; }
   .site-footer__grid { grid-template-columns: 1fr auto; }
   .site-footer__grid > div:nth-child(2) { grid-column: 1 / -1; grid-row: 2; }
