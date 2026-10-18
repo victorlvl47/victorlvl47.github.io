@@ -1,7 +1,7 @@
 ---
 import type { Locale, Portfolio } from '../lib/portfolio';
-interface Props { navigation: Portfolio['navigation']; location: string; locale: Locale; ui: Portfolio['ui'] }
-const { navigation, location, locale, ui } = Astro.props;
+interface Props { navigation: Portfolio['navigation']; locale: Locale; ui: Portfolio['ui'] }
+const { navigation, locale, ui } = Astro.props;
 const languageLinks = [
   { locale: 'en', label: 'English', href: '/' },
   { locale: 'es', label: 'Español', href: '/es/' }
@@ -14,7 +14,6 @@ const languageLinks = [
     </a>
     <nav aria-label={ui.mainNavigationLabel}><ul>{navigation.map((item) => <li><a href={item.href}>{item.label}</a></li>)}</ul></nav>
     <div class="site-header__meta">
-      <span class="header-location mono"><span class="header-location__dot" aria-hidden="true"></span>{location}</span>
       <details class="language-selector" data-language-selector>
         <summary class="mono" aria-label={ui.languageSelectorLabel}>{locale.toUpperCase()} <span aria-hidden="true">⌄</span></summary>
         <ul aria-label={ui.languageSelectorLabel}>
