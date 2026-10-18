@@ -45,20 +45,22 @@
   },
   "projects": [
     {
-      "id": "heic-to-png",
-      "title": "HEIC to PNG Converter",
-      "category": "Image utility",
-      "description": "A Python script that converts HEIC images in a folder to PNG using pillow-heif and Pillow.",
+      "id": "field-lead-tracker",
+      "title": "Field Lead Tracker",
+      "category": "Mobile CRM",
+      "description": "An offline-first mobile CRM built with React Native and Expo, featuring local SQLite storage, Supabase sync, conflict detection and resolution, testing, and Sentry monitoring.",
       "technologies": [
-        "Python",
-        "pillow-heif",
-        "Pillow"
+        "React Native",
+        "Expo",
+        "SQLite",
+        "Supabase",
+        "Sentry"
       ],
       "image": {
-        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1683264900/heic-to-png_faxmdx.png",
-        "alt": "Screenshot of the HEIC to PNG Converter running in a terminal"
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1785026434/personal_portafolio/field_lead_tracker_thumbnail_r1vz7f.png",
+        "alt": ""
       },
-      "projectUrl": "https://github.com/victorlvl47/heic-to-png"
+      "projectUrl": "https://github.com/victorlvl47/field-lead-tracker"
     },
     {
       "id": "generate-alt-tags",
@@ -135,6 +137,66 @@
         "alt": ""
       },
       "projectUrl": "https://github.com/victorlvl47/FaceMeshDemo"
+    },
+    {
+      "id": "trainer-assistant",
+      "title": "CV Trainer Assistant",
+      "category": "Computer vision demo",
+      "description": "A computer vision trainer assistant demo made possible with the use of MediaPipe and OpenCV.",
+      "technologies": [
+        "Python",
+        "MediaPipe"
+      ],
+      "image": {
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1630377782/personal_portafolio/CVTrainerAssistantThumbnail_o80vwc.png",
+        "alt": "Trainer assistant pose tracking demo thumbnail"
+      },
+      "projectUrl": "https://github.com/victorlvl47/PoseMediaPipeDemo#trainer-assistant-demo"
+    },
+    {
+      "id": "cv-paint",
+      "title": "CV Paint Demo",
+      "category": "Computer vision demo",
+      "description": "A MS Paint like application but you use your hand as the cursor to paint and select colors and tools.",
+      "technologies": [
+        "Python"
+      ],
+      "image": {
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1630638240/personal_portafolio/cv_paint_thumbnail_edited_rh0mne.png",
+        "alt": "CV Paint hand tracking demo thumbnail"
+      },
+      "projectUrl": "https://github.com/victorlvl47/HandTrackingDemo#cv-paint-demo"
+    },
+    {
+      "id": "cv-mouse",
+      "title": "CV Mouse",
+      "category": "Computer vision demo",
+      "description": "Use your webcam and hand gestures to control your computer's mouse cursor. Made with MediaPipe and OpenCV2.",
+      "technologies": [
+        "Python",
+        "MediaPipe",
+        "OpenCV"
+      ],
+      "image": {
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1630640289/personal_portafolio/cvMouse_thumbnail_edited_ouftto.png",
+        "alt": ""
+      },
+      "projectUrl": "https://github.com/victorlvl47/cvMouseDemo"
+    },
+    {
+      "id": "hand-gesture-control",
+      "title": "Hand Gesture as a Control",
+      "category": "Computer vision demo",
+      "description": "Use hand gestures to control the volume of your computer. Made with MediaPipe and pyalsaaudio.",
+      "technologies": [
+        "Python",
+        "pyalsaaudio"
+      ],
+      "image": {
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1630640666/personal_portafolio/hand_gesture_as_a_control_thumbnail_edited_y5hviz.png",
+        "alt": "Hand gesture volume-control demo thumbnail"
+      },
+      "projectUrl": "https://github.com/victorlvl47/HandTrackingDemo#hand-gesture-as-a-control"
     },
     {
       "id": "medimine-landing-page",
@@ -259,82 +321,20 @@
       "projectUrl": "https://codepen.io/victorlvl47/full/WNjQvQN"
     },
     {
-      "id": "field-lead-tracker",
-      "title": "Field Lead Tracker",
-      "category": "Mobile CRM",
-      "description": "An offline-first mobile CRM built with React Native and Expo, featuring local SQLite storage, Supabase sync, conflict detection and resolution, testing, and Sentry monitoring.",
-      "technologies": [
-        "React Native",
-        "Expo",
-        "SQLite",
-        "Supabase",
-        "Sentry"
-      ],
-      "image": {
-        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1785026434/personal_portafolio/field_lead_tracker_thumbnail_r1vz7f.png",
-        "alt": ""
-      },
-      "projectUrl": "https://github.com/victorlvl47/field-lead-tracker"
-    },
-    {
-      "id": "trainer-assistant",
-      "title": "CV Trainer Assistant",
-      "category": "Computer vision demo",
-      "description": "A computer vision trainer assistant demo made possible with the use of MediaPipe and OpenCV.",
+      "id": "heic-to-png",
+      "title": "HEIC to PNG Converter",
+      "category": "Image utility",
+      "description": "A Python script that converts HEIC images in a folder to PNG using pillow-heif and Pillow.",
       "technologies": [
         "Python",
-        "MediaPipe"
+        "pillow-heif",
+        "Pillow"
       ],
       "image": {
-        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1630377782/personal_portafolio/CVTrainerAssistantThumbnail_o80vwc.png",
-        "alt": "Trainer assistant pose tracking demo thumbnail"
+        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1683264900/heic-to-png_faxmdx.png",
+        "alt": "Screenshot of the HEIC to PNG Converter running in a terminal"
       },
-      "projectUrl": "https://github.com/victorlvl47/PoseMediaPipeDemo#trainer-assistant-demo"
-    },
-    {
-      "id": "cv-paint",
-      "title": "CV Paint Demo",
-      "category": "Computer vision demo",
-      "description": "A MS Paint like application but you use your hand as the cursor to paint and select colors and tools.",
-      "technologies": [
-        "Python"
-      ],
-      "image": {
-        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1630638240/personal_portafolio/cv_paint_thumbnail_edited_rh0mne.png",
-        "alt": "CV Paint hand tracking demo thumbnail"
-      },
-      "projectUrl": "https://github.com/victorlvl47/HandTrackingDemo#cv-paint-demo"
-    },
-    {
-      "id": "cv-mouse",
-      "title": "CV Mouse",
-      "category": "Computer vision demo",
-      "description": "Use your webcam and hand gestures to control your computer's mouse cursor. Made with MediaPipe and OpenCV2.",
-      "technologies": [
-        "Python",
-        "MediaPipe",
-        "OpenCV"
-      ],
-      "image": {
-        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1630640289/personal_portafolio/cvMouse_thumbnail_edited_ouftto.png",
-        "alt": ""
-      },
-      "projectUrl": "https://github.com/victorlvl47/cvMouseDemo"
-    },
-    {
-      "id": "hand-gesture-control",
-      "title": "Hand Gesture as a Control",
-      "category": "Computer vision demo",
-      "description": "Use hand gestures to control the volume of your computer. Made with MediaPipe and pyalsaaudio.",
-      "technologies": [
-        "Python",
-        "pyalsaaudio"
-      ],
-      "image": {
-        "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1630640666/personal_portafolio/hand_gesture_as_a_control_thumbnail_edited_y5hviz.png",
-        "alt": "Hand gesture volume-control demo thumbnail"
-      },
-      "projectUrl": "https://github.com/victorlvl47/HandTrackingDemo#hand-gesture-as-a-control"
+      "projectUrl": "https://github.com/victorlvl47/heic-to-png"
     },
     {
       "id": "experiences-page-concept",
