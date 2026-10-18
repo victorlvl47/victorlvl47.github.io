@@ -28,10 +28,7 @@ export interface Portfolio {
 const sourceFile = path.resolve(process.cwd(), 'src/data/portfolio.json');
 const publicDir = path.resolve(process.cwd(), 'public');
 const requiredContactIds = ['facebook', 'github', 'x', 'email', 'youtube', 'linkedin', 'reddit'];
-const exactQuotes: Record<Locale, string> = {
-  en: 'Self-education is, I firmly believe, the only kind of education there is.',
-  es: 'La autoeducación es, creo firmemente, el único tipo de educación que existe.'
-};
+const exactQuote = 'Self-education is, I firmly believe, the only kind of education there is.';
 
 export function isLocale(value: string): value is Locale {
   return locales.includes(value as Locale);
@@ -145,7 +142,7 @@ export async function validatePortfolio(raw: unknown, locale: Locale): Promise<P
   } as Portfolio['footer'];
   for (const language of locales) {
     const quote = localized(footerSource.quote, 'footer.quote', language);
-    if (quote !== exactQuotes[language]) throw new Error(`footer.quote.${language} must match the approved quotation exactly`);
+    if (quote !== exactQuote) throw new Error(`footer.quote.${language} must retain the original quotation exactly`);
   }
   if (footer.quoteAttribution !== 'Isaac Asimov') throw new Error('footer.quoteAttribution must match the original exactly');
   const ui = localizedFields(object(data.ui, 'ui'), ['skipToContent', 'mainNavigationLabel', 'backToTopLabel', 'technologiesLabel', 'opensInNewTab', 'projectCount', 'copyEmailLabel', 'copyEmailAction', 'emailCopied', 'emailCopyError', 'languageSelectorLabel'], 'ui', locale) as Portfolio['ui'];
