@@ -2,7 +2,7 @@
   "site": {
     "name": "Victor Maldonado",
     "role": "Software Developer",
-    "tagline": "I build useful systems in strange places.",
+    "tagline": "Love to design and build. Curious about a wide range of project types and tech.",
     "description": "Victor Maldonado is a software developer in Guatemala. Explore selected software projects and ways to get in touch."
   },
   "navigation": [
@@ -33,7 +33,7 @@
     }
   },
   "work": {
-    "eyebrow": "01 / Selected rooms",
+    "eyebrow": "01 / The Laboratory",
     "heading": "Selected projects.",
     "intro": "Different problems. Built with curiosity.",
     "projectAction": "View project",
