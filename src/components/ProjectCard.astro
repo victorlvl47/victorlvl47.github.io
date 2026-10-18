@@ -1,7 +1,7 @@
 ---
 import type { Project } from '../lib/portfolio';
-interface Props { project: Project; number: number; action: string }
-const { project, number, action } = Astro.props;
+interface Props { project: Project; number: number; action: string; technologiesLabel: string; opensInNewTab: string }
+const { project, number, action, technologiesLabel, opensInNewTab } = Astro.props;
 ---
 <article class="project-card" data-project-id={project.id}>
   <div class="project-card__image">
@@ -12,9 +12,9 @@ const { project, number, action } = Astro.props;
     <h3>{project.title}</h3>
     <p class="project-card__category mono">{project.category}</p>
     <p class="project-card__description">{project.description}</p>
-    {project.technologies.length > 0 && <ul class="project-card__technologies mono" aria-label="Technologies">
+    {project.technologies.length > 0 && <ul class="project-card__technologies mono" aria-label={technologiesLabel}>
       {project.technologies.map((technology) => <li>{technology}</li>)}
     </ul>}
-    <a class="project-card__link mono" href={project.projectUrl} target="_blank" rel="noopener noreferrer" aria-label={`${action}: ${project.title} (opens in a new tab)`}>{action} <span aria-hidden="true">↗</span></a>
+    <a class="project-card__link mono" href={project.projectUrl} target="_blank" rel="noopener noreferrer" aria-label={`${action}: ${project.title} (${opensInNewTab})`}>{action} <span aria-hidden="true">↗</span></a>
   </div>
 </article>

@@ -1,0 +1,59 @@
+---
+import type { Locale, Portfolio } from '../lib/portfolio';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props { locale: Locale; portfolio: Portfolio }
+const { locale, portfolio } = Astro.props;
+const initialProjects = portfolio.projects.slice(0, 6);
+const englishUrl = new URL('/', Astro.site);
+const spanishUrl = new URL('/es/', Astro.site);
+const canonicalUrl = locale === 'en' ? englishUrl : spanishUrl;
+const projectsUrl = locale === 'en' ? '/projects.json' : '/es/projects.json';
+const initialProjectCount = portfolio.ui.projectCount
+  .replace('{shown}', String(initialProjects.length))
+  .replace('{total}', String(portfolio.projects.length));
+---
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#111210" />
+    <meta name="description" content={portfolio.site.description} />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang="en" href={englishUrl} />
+    <link rel="alternate" hreflang="es" href={spanishUrl} />
+    <link rel="alternate" hreflang="x-default" href={englishUrl} />
+    <title>{portfolio.site.name} / {portfolio.site.role}</title>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">{portfolio.ui.skipToContent}</a>
+    <Header navigation={portfolio.navigation} location={portfolio.footer.location} locale={locale} ui={portfolio.ui} />
+    <main id="main">
+      <Hero site={portfolio.site} hero={portfolio.hero} opensInNewTab={portfolio.ui.opensInNewTab} />
+      <section id="projects" class="projects section-rule" aria-labelledby="projects-title">
+        <div class="shell">
+          <p class="eyebrow mono">{portfolio.work.eyebrow}</p>
+          <div class="projects__heading"><h2 id="projects-title">{portfolio.work.heading}</h2><p>{portfolio.work.intro}</p></div>
+          <div id="project-grid" class="project-grid">{initialProjects.map((project, index) => <ProjectCard project={project} number={index + 1} action={portfolio.work.projectAction} technologiesLabel={portfolio.ui.technologiesLabel} opensInNewTab={portfolio.ui.opensInNewTab} />)}</div>
+          <div class="projects__more" data-load-more data-url={projectsUrl} data-total={portfolio.projects.length} data-action={portfolio.work.projectAction} data-load-label={portfolio.work.loadAction} data-loading-label={portfolio.work.loadingAction} data-retry-label={portfolio.work.retryAction} data-error-label={portfolio.work.loadError} data-end-label={portfolio.work.endMessage} data-count-label={portfolio.ui.projectCount} data-technologies-label={portfolio.ui.technologiesLabel} data-new-tab-label={portfolio.ui.opensInNewTab}>
+            <button class="button button--ghost" type="button" hidden>{portfolio.work.loadAction} ↓</button>
+            <p class="projects__status mono" role="status" aria-live="polite">{initialProjectCount}</p>
+          </div>
+        </div>
+      </section>
+      <Contact contact={portfolio.contact} backgroundImage={portfolio.hero.image} ui={portfolio.ui} />
+    </main>
+    <Footer footer={portfolio.footer} name={portfolio.site.name} backToTopLabel={portfolio.ui.backToTopLabel} />
+    <script>
+      import '../scripts/hero-parallax.ts';
+      import '../scripts/load-more.ts';
+    </script>
+  </body>
+</html>

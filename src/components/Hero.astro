@@ -1,7 +1,7 @@
 ---
 import type { Portfolio } from '../lib/portfolio';
-interface Props { site: Portfolio['site']; hero: Portfolio['hero'] }
-const { site, hero } = Astro.props;
+interface Props { site: Portfolio['site']; hero: Portfolio['hero']; opensInNewTab: string }
+const { site, hero, opensInNewTab } = Astro.props;
 ---
 <section id="about" class="hero section-rule" aria-labelledby="hero-title" data-parallax-section>
   <div class="room-image hero__image" aria-hidden="true">
@@ -20,7 +20,7 @@ const { site, hero } = Astro.props;
       <div class="hero__preview">
         <span class="mono">{hero.previewLabel}</span>
         <p>{hero.previewText}</p>
-        <a class="hero__preview-link mono" href={hero.previewLinkUrl} target="_blank" rel="noreferrer" aria-label={`${hero.previewLinkLabel} (opens in a new tab)`}>{hero.previewLinkLabel} <span aria-hidden="true">↗</span></a>
+        <a class="hero__preview-link mono" href={hero.previewLinkUrl} target="_blank" rel="noreferrer" aria-label={`${hero.previewLinkLabel} (${opensInNewTab})`}>{hero.previewLinkLabel} <span aria-hidden="true">↗</span></a>
       </div>
     </div>
   </div>
