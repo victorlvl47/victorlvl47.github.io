@@ -1,0 +1,12 @@
+---
+import type { Portfolio } from '../lib/portfolio';
+interface Props { footer: Portfolio['footer']; name: string }
+const { footer, name } = Astro.props;
+---
+<footer class="site-footer section-rule">
+  <div class="shell site-footer__grid">
+    <div class="site-footer__identity"><a class="site-footer__mark" href="#top" aria-label="Back to top"><img src="/images/brand/mascot_with_name.png" alt={`${name} logo`} width="2000" height="2000" /></a><p class="mono">{name} &copy; {new Date().getFullYear()}</p></div>
+    <div class="site-footer__quote"><blockquote>&ldquo;{footer.quote}&rdquo;</blockquote><cite class="mono">&mdash; {footer.quoteAttribution}</cite></div>
+    <div class="site-footer__meta"><a class="site-footer__top mono" href="#top">{footer.topAction} &uarr;</a><p class="mono">{footer.location}</p></div>
+  </div>
+</footer>

@@ -1,0 +1,20 @@
+---
+import type { Project } from '../lib/portfolio';
+interface Props { project: Project; number: number; action: string }
+const { project, number, action } = Astro.props;
+---
+<article class="project-card" data-project-id={project.id}>
+  <div class="project-card__image">
+    <img src={project.image.url} alt={project.image.alt} width="800" height="450" loading="lazy" decoding="async" />
+  </div>
+  <div class:list={['project-card__body', !project.technologies.length && 'project-card__body--no-tech']}>
+    <p class="project-card__index mono">{String(number).padStart(3, '0')} /</p>
+    <h3>{project.title}</h3>
+    <p class="project-card__category mono">{project.category}</p>
+    <p class="project-card__description">{project.description}</p>
+    {project.technologies.length > 0 && <ul class="project-card__technologies mono" aria-label="Technologies">
+      {project.technologies.map((technology) => <li>{technology}</li>)}
+    </ul>}
+    <a class="project-card__link mono" href={project.projectUrl} target="_blank" rel="noopener noreferrer" aria-label={`${action}: ${project.title} (opens in a new tab)`}>{action} <span aria-hidden="true">↗</span></a>
+  </div>
+</article>

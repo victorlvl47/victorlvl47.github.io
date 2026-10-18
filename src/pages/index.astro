@@ -1,0 +1,47 @@
+---
+import { loadPortfolio } from '../lib/portfolio';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+const portfolio = await loadPortfolio();
+const initialProjects = portfolio.projects.slice(0, 6);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#111210" />
+    <meta name="description" content={portfolio.site.description} />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <title>{portfolio.site.name} / {portfolio.site.role}</title>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <Header navigation={portfolio.navigation} location={portfolio.footer.location} />
+    <main id="main">
+      <Hero site={portfolio.site} hero={portfolio.hero} />
+      <section id="projects" class="projects section-rule" aria-labelledby="projects-title">
+        <div class="shell">
+          <p class="eyebrow mono">{portfolio.work.eyebrow}</p>
+          <div class="projects__heading"><h2 id="projects-title">{portfolio.work.heading}</h2><p>{portfolio.work.intro}</p></div>
+          <div id="project-grid" class="project-grid">{initialProjects.map((project, index) => <ProjectCard project={project} number={index + 1} action={portfolio.work.projectAction} />)}</div>
+          <div class="projects__more" data-load-more data-url="/projects.json" data-total={portfolio.projects.length} data-action={portfolio.work.projectAction} data-load-label={portfolio.work.loadAction} data-loading-label={portfolio.work.loadingAction} data-retry-label={portfolio.work.retryAction} data-error-label={portfolio.work.loadError} data-end-label={portfolio.work.endMessage}>
+            <button class="button button--ghost" type="button" hidden>{portfolio.work.loadAction} ↓</button>
+            <p class="projects__status mono" role="status" aria-live="polite">{initialProjects.length} of {portfolio.projects.length} projects displayed</p>
+          </div>
+        </div>
+      </section>
+      <Contact contact={portfolio.contact} backgroundImage={portfolio.hero.image} />
+    </main>
+    <Footer footer={portfolio.footer} name={portfolio.site.name} />
+    <script>
+      import '../scripts/hero-parallax.ts';
+      import '../scripts/load-more.ts';
+    </script>
+  </body>
+</html>

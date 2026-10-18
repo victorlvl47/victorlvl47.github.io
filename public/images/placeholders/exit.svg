@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 960" role="img" aria-label="Decorative exit room placeholder">
+  <rect width="1200" height="960" fill="#252a24"/>
+  <path d="M0 0 420 300v390L0 960M1200 0 780 300v390l420 270M0 960 420 690h360l420 270M420 300h360v390H420Z" fill="none" stroke="#5b5c50" stroke-width="4"/>
+  <path d="M525 414h180v276H525Z" fill="#171a16" stroke="#5b5c50" stroke-width="4"/>
+  <path d="M525 414v276l180-95V414Z" fill="#1d1e19" stroke="#5b5c50" stroke-width="4"/>
+  <path d="M525 377h180v29H525Z" fill="#8fd8ab"/>
+  <path d="M0 242h180l240 173M1200 242h-180L780 415M180 110v737M1020 110v737M360 230v502M840 230v502" fill="none" stroke="#5b5c50" stroke-width="3" stroke-opacity=".55"/>
+  <path d="M370 78h460l-110 66H480Z" fill="#f2ece0" fill-opacity=".12" stroke="#8a7033" stroke-opacity=".6" stroke-width="3"/>
+  <text x="600" y="912" text-anchor="middle" fill="#b8b5a8" font-family="monospace" font-size="17" letter-spacing="3">EXIT ROOM ARTWORK / PENDING</text>
+</svg>
