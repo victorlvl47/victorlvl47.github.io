@@ -1,417 +1,495 @@
 {
   "site": {
     "name": "Victor Maldonado",
-    "role": "Software Developer",
-    "tagline": "Love to design and build. Curious about a wide range of project types and tech.",
-    "description": "Victor Maldonado is a software developer in Guatemala. Explore selected software projects and ways to get in touch."
+    "role": {"en": "Software Developer", "es": "Desarrollador de software"},
+    "tagline": {
+      "en": "Love to design and build. Curious about a wide range of project types and tech.",
+      "es": "Me encanta diseñar y crear. Siento curiosidad por una amplia variedad de proyectos y tecnologías."
+    },
+    "description": {
+      "en": "Victor Maldonado is a software developer in Guatemala. Explore selected software projects and ways to get in touch.",
+      "es": "Victor Maldonado es un desarrollador de software en Guatemala. Explora una selección de proyectos de software y formas de ponerte en contacto."
+    }
   },
   "navigation": [
-    {
-      "label": "About",
-      "href": "#about"
-    },
-    {
-      "label": "Work",
-      "href": "#projects"
-    },
-    {
-      "label": "Contact",
-      "href": "#contact"
-    }
+    {"label": {"en": "About", "es": "Acerca de"}, "href": "#about"},
+    {"label": {"en": "Work", "es": "Proyectos"}, "href": "#projects"},
+    {"label": {"en": "Contact", "es": "Contacto"}, "href": "#contact"}
   ],
   "hero": {
-    "eyebrow": "Level 00 / Entrance",
-    "primaryAction": "Explore projects",
-    "secondaryAction": "Get in touch",
-    "previewLabel": "Theme / The Backrooms",
-    "previewText": "This site takes inspiration from The Backrooms.",
-    "previewLinkLabel": "What are The Backrooms?",
-    "previewLinkUrl": "https://en.wikipedia.org/wiki/The_Backrooms",
-    "image": {
-      "url": "/images/placeholders/corridor-hero.png",
-      "alt": ""
-    }
+    "eyebrow": {"en": "Level 00 / Entrance", "es": "Nivel 00 / Entrada"},
+    "primaryAction": {"en": "Explore projects", "es": "Explorar proyectos"},
+    "secondaryAction": {"en": "Get in touch", "es": "Contactar"},
+    "previewLabel": {"en": "Theme / The Backrooms", "es": "Tema / The Backrooms"},
+    "previewText": {
+      "en": "This site takes inspiration from The Backrooms.",
+      "es": "Este sitio está inspirado en The Backrooms."
+    },
+    "previewLinkLabel": {"en": "What are The Backrooms?", "es": "¿Qué son The Backrooms?"},
+    "previewLinkUrl": {
+      "en": "https://en.wikipedia.org/wiki/The_Backrooms",
+      "es": "https://es.wikipedia.org/wiki/The_Backrooms"
+    },
+    "image": {"url": "/images/placeholders/corridor-hero.png", "alt": {"en": "", "es": ""}}
   },
   "work": {
-    "eyebrow": "01 / The Laboratory",
-    "heading": "Public projects.",
-    "intro": "Different domains. Different technologies. Powered by the same curiosity to build.",
-    "projectAction": "View project",
-    "loadAction": "Load more",
-    "loadingAction": "Loading projects…",
-    "retryAction": "Retry loading",
-    "loadError": "Projects could not be loaded. Try again.",
-    "endMessage": "All projects shown."
+    "eyebrow": {"en": "01 / The Laboratory", "es": "01 / El laboratorio"},
+    "heading": {"en": "Public projects.", "es": "Proyectos públicos."},
+    "intro": {
+      "en": "Different domains. Different technologies. Powered by the same curiosity to build.",
+      "es": "Distintos campos. Distintas tecnologías. Impulsados por la misma curiosidad por crear."
+    },
+    "projectAction": {"en": "View project", "es": "Ver proyecto"},
+    "loadAction": {"en": "Load more", "es": "Cargar más"},
+    "loadingAction": {"en": "Loading projects…", "es": "Cargando proyectos…"},
+    "retryAction": {"en": "Retry loading", "es": "Reintentar"},
+    "loadError": {
+      "en": "Projects could not be loaded. Try again.",
+      "es": "No se pudieron cargar los proyectos. Inténtalo de nuevo."
+    },
+    "endMessage": {"en": "All projects shown.", "es": "Se muestran todos los proyectos."}
   },
   "projects": [
     {
       "id": "field-lead-tracker",
       "title": "Field Lead Tracker",
-      "category": "Mobile CRM",
-      "description": "An offline-first mobile CRM built with React Native and Expo, featuring local SQLite storage, Supabase sync, conflict detection and resolution, testing, and Sentry monitoring.",
-      "technologies": [
-        "React Native",
-        "Expo",
-        "SQLite",
-        "Supabase",
-        "Sentry"
-      ],
+      "category": {"en": "Mobile CRM", "es": "CRM móvil"},
+      "description": {
+        "en": "An offline-first mobile CRM built with React Native and Expo, featuring local SQLite storage, Supabase sync, conflict detection and resolution, testing, and Sentry monitoring.",
+        "es": "Un CRM móvil diseñado para funcionar primero sin conexión, creado con React Native y Expo, con almacenamiento local en SQLite, sincronización con Supabase, detección y resolución de conflictos, pruebas y monitoreo con Sentry."
+      },
+      "technologies": ["React Native", "Expo", "SQLite", "Supabase", "Sentry"],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1785026434/personal_portafolio/field_lead_tracker_thumbnail_r1vz7f.png",
-        "alt": ""
+        "alt": {"en": "", "es": ""}
       },
       "projectUrl": "https://github.com/victorlvl47/field-lead-tracker"
     },
     {
       "id": "generate-alt-tags",
       "title": "Alt Tags Generator",
-      "category": "Accessibility tool",
-      "description": "A Python script that uses AWS S3 and Rekognition to generate alternative text for images in a bucket.",
-      "technologies": [
-        "Python",
-        "AWS S3",
-        "AWS Rekognition"
-      ],
+      "category": {"en": "Accessibility tool", "es": "Herramienta de accesibilidad"},
+      "description": {
+        "en": "A Python script that uses AWS S3 and Rekognition to generate alternative text for images in a bucket.",
+        "es": "Un script de Python que utiliza AWS S3 y Rekognition para generar texto alternativo para las imágenes de un bucket."
+      },
+      "technologies": ["Python", "AWS S3", "AWS Rekognition"],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1683754805/Generate_alt_tags_tkn0f4.png",
-        "alt": "Screenshot showing generated alternative tags for a school of fish image"
+        "alt": {
+          "en": "Screenshot showing generated alternative tags for a school of fish image",
+          "es": "Captura de pantalla que muestra etiquetas alternativas generadas para la imagen de un banco de peces"
+        }
       },
       "projectUrl": "https://github.com/victorlvl47/generate-alt-tags"
     },
     {
       "id": "hand-tracking",
       "title": "CV Hand Tracking",
-      "category": "Computer vision demo",
-      "description": "A webcam hand-tracking demo with related gesture, painting, and finger-counting experiments.",
-      "technologies": [
-        "Python",
-        "MediaPipe"
-      ],
+      "category": {"en": "Computer vision demo", "es": "Demostración de visión artificial"},
+      "description": {
+        "en": "A webcam hand-tracking demo with related gesture, painting, and finger-counting experiments.",
+        "es": "Una demostración de seguimiento de manos mediante cámara web, con experimentos relacionados de gestos, dibujo y conteo de dedos."
+      },
+      "technologies": ["Python", "MediaPipe"],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1629166638/personal_portafolio/hand_tracking_edited_gkfo51.gif",
-        "alt": "Hand tracking demo thumbnail"
+        "alt": {"en": "Hand tracking demo thumbnail", "es": "Miniatura de la demostración de seguimiento de manos"}
       },
       "projectUrl": "https://github.com/victorlvl47/HandTrackingDemo"
     },
     {
       "id": "pose-detection",
       "title": "CV Pose Detection",
-      "category": "Computer vision demo",
-      "description": "A MediaPipe pose detection demo that estimates human poses from video.",
-      "technologies": [
-        "Python",
-        "MediaPipe"
-      ],
+      "category": {"en": "Computer vision demo", "es": "Demostración de visión artificial"},
+      "description": {
+        "en": "A MediaPipe pose detection demo that estimates human poses from video.",
+        "es": "Una demostración de detección de poses con MediaPipe que estima poses humanas a partir de video."
+      },
+      "technologies": ["Python", "MediaPipe"],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1629851922/personal_portafolio/pose_detection_thumbnail_xrmzpt.gif",
-        "alt": "Pose detection demo thumbnail"
+        "alt": {"en": "Pose detection demo thumbnail", "es": "Miniatura de la demostración de detección de poses"}
       },
       "projectUrl": "https://github.com/victorlvl47/PoseMediaPipeDemo"
     },
     {
       "id": "face-detection",
       "title": "CV Face Detection",
-      "category": "Computer vision demo",
-      "description": "A MediaPipe demo that detects faces in a video file.",
-      "technologies": [
-        "Python",
-        "MediaPipe"
-      ],
+      "category": {"en": "Computer vision demo", "es": "Demostración de visión artificial"},
+      "description": {
+        "en": "A MediaPipe demo that detects faces in a video file.",
+        "es": "Una demostración con MediaPipe que detecta rostros en un archivo de video."
+      },
+      "technologies": ["Python", "MediaPipe"],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1629872392/personal_portafolio/faceDetectionThumbnail_jgxcme.png",
-        "alt": ""
+        "alt": {"en": "", "es": ""}
       },
       "projectUrl": "https://github.com/victorlvl47/FaceDetectionDemo"
     },
     {
       "id": "face-mesh",
       "title": "CV Face Mesh",
-      "category": "Computer vision demo",
-      "description": "A face-mesh demo that processes video with MediaPipe.",
-      "technologies": [
-        "Python",
-        "MediaPipe"
-      ],
+      "category": {"en": "Computer vision demo", "es": "Demostración de visión artificial"},
+      "description": {
+        "en": "A face-mesh demo that processes video with MediaPipe.",
+        "es": "Una demostración de malla facial que procesa video con MediaPipe."
+      },
+      "technologies": ["Python", "MediaPipe"],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1629946834/personal_portafolio/faceMeshDemoThumbnail_ihemwl.png",
-        "alt": ""
+        "alt": {"en": "", "es": ""}
       },
       "projectUrl": "https://github.com/victorlvl47/FaceMeshDemo"
     },
     {
       "id": "trainer-assistant",
       "title": "CV Trainer Assistant",
-      "category": "Computer vision demo",
-      "description": "A computer vision trainer assistant demo made possible with the use of MediaPipe and OpenCV.",
-      "technologies": [
-        "Python",
-        "MediaPipe"
-      ],
+      "category": {"en": "Computer vision demo", "es": "Demostración de visión artificial"},
+      "description": {
+        "en": "A computer vision trainer assistant demo made possible with the use of MediaPipe and OpenCV.",
+        "es": "Una demostración de un asistente de entrenamiento con visión artificial, creada con MediaPipe y OpenCV."
+      },
+      "technologies": ["Python", "MediaPipe"],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1630377782/personal_portafolio/CVTrainerAssistantThumbnail_o80vwc.png",
-        "alt": "Trainer assistant pose tracking demo thumbnail"
+        "alt": {
+          "en": "Trainer assistant pose tracking demo thumbnail",
+          "es": "Miniatura de la demostración de seguimiento de poses del asistente de entrenamiento"
+        }
       },
       "projectUrl": "https://github.com/victorlvl47/PoseMediaPipeDemo#trainer-assistant-demo"
     },
     {
       "id": "cv-paint",
       "title": "CV Paint Demo",
-      "category": "Computer vision demo",
-      "description": "A MS Paint like application but you use your hand as the cursor to paint and select colors and tools.",
-      "technologies": [
-        "Python"
-      ],
+      "category": {"en": "Computer vision demo", "es": "Demostración de visión artificial"},
+      "description": {
+        "en": "A MS Paint like application but you use your hand as the cursor to paint and select colors and tools.",
+        "es": "Una aplicación similar a MS Paint en la que utilizas la mano como cursor para dibujar y seleccionar colores y herramientas."
+      },
+      "technologies": ["Python"],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1630638240/personal_portafolio/cv_paint_thumbnail_edited_rh0mne.png",
-        "alt": "CV Paint hand tracking demo thumbnail"
+        "alt": {
+          "en": "CV Paint hand tracking demo thumbnail",
+          "es": "Miniatura de la demostración de seguimiento de manos de CV Paint"
+        }
       },
       "projectUrl": "https://github.com/victorlvl47/HandTrackingDemo#cv-paint-demo"
     },
     {
       "id": "cv-mouse",
       "title": "CV Mouse",
-      "category": "Computer vision demo",
-      "description": "Use your webcam and hand gestures to control your computer's mouse cursor. Made with MediaPipe and OpenCV2.",
-      "technologies": [
-        "Python",
-        "MediaPipe",
-        "OpenCV"
-      ],
+      "category": {"en": "Computer vision demo", "es": "Demostración de visión artificial"},
+      "description": {
+        "en": "Use your webcam and hand gestures to control your computer's mouse cursor. Made with MediaPipe and OpenCV2.",
+        "es": "Utiliza la cámara web y gestos con la mano para controlar el cursor del equipo. Creado con MediaPipe y OpenCV."
+      },
+      "technologies": ["Python", "MediaPipe", "OpenCV"],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1630640289/personal_portafolio/cvMouse_thumbnail_edited_ouftto.png",
-        "alt": ""
+        "alt": {"en": "", "es": ""}
       },
       "projectUrl": "https://github.com/victorlvl47/cvMouseDemo"
     },
     {
       "id": "hand-gesture-control",
       "title": "Hand Gesture as a Control",
-      "category": "Computer vision demo",
-      "description": "Use hand gestures to control the volume of your computer. Made with MediaPipe and pyalsaaudio.",
-      "technologies": [
-        "Python",
-        "pyalsaaudio"
-      ],
+      "category": {"en": "Computer vision demo", "es": "Demostración de visión artificial"},
+      "description": {
+        "en": "Use hand gestures to control the volume of your computer. Made with MediaPipe and pyalsaaudio.",
+        "es": "Utiliza gestos con la mano para controlar el volumen del equipo. Creado con MediaPipe y pyalsaaudio."
+      },
+      "technologies": ["Python", "pyalsaaudio"],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1630640666/personal_portafolio/hand_gesture_as_a_control_thumbnail_edited_y5hviz.png",
-        "alt": "Hand gesture volume-control demo thumbnail"
+        "alt": {
+          "en": "Hand gesture volume-control demo thumbnail",
+          "es": "Miniatura de la demostración de control de volumen mediante gestos con la mano"
+        }
       },
       "projectUrl": "https://github.com/victorlvl47/HandTrackingDemo#hand-gesture-as-a-control"
     },
     {
       "id": "medimine-landing-page",
       "title": "Medimine Landing Page",
-      "category": "Web concept",
-      "description": "A landing page with news and information about how the concept application 'Medimine' works.",
+      "category": {"en": "Web concept", "es": "Concepto web"},
+      "description": {
+        "en": "A landing page with news and information about how the concept application 'Medimine' works.",
+        "es": "Una página de destino con noticias e información sobre el funcionamiento de la aplicación conceptual «Medimine»."
+      },
       "technologies": [],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1626050617/personal_portafolio/medimine_thumbnail_tfrpqw.png",
-        "alt": ""
+        "alt": {"en": "", "es": ""}
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/QWpVEeE"
     },
     {
       "id": "tribute-page",
       "title": "Tribute Page",
-      "category": "Tribute page",
-      "description": "Albert Camus tribute page, information about his works and personal life.",
+      "category": {"en": "Tribute page", "es": "Página de homenaje"},
+      "description": {
+        "en": "Albert Camus tribute page, information about his works and personal life.",
+        "es": "Una página de homenaje a Albert Camus con información sobre sus obras y su vida personal."
+      },
       "technologies": [],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1622617496/personal_portafolio/tribute_albert_camus_qukvly.png",
-        "alt": ""
+        "alt": {"en": "", "es": ""}
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/JjWKEmE"
     },
     {
       "id": "documentation-page",
       "title": "Documentation Page",
-      "category": "Documentation",
-      "description": "A documentation page for the javascript language aimed to beginners.",
+      "category": {"en": "Documentation", "es": "Documentación"},
+      "description": {
+        "en": "A documentation page for the javascript language aimed to beginners.",
+        "es": "Una página de documentación de JavaScript dirigida a principiantes."
+      },
       "technologies": [],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1622619793/personal_portafolio/js_docs_croped_yk6idv.png",
-        "alt": ""
+        "alt": {"en": "", "es": ""}
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/yLMoXOL"
     },
     {
       "id": "survey-form",
       "title": "Survey Form",
-      "category": "Form",
-      "description": "A Survey Form for Free Code Camp.",
+      "category": {"en": "Form", "es": "Formulario"},
+      "description": {
+        "en": "A Survey Form for Free Code Camp.",
+        "es": "Un formulario de encuesta para freeCodeCamp."
+      },
       "technologies": [],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1622660333/personal_portafolio/survey_form_fcc_khv41w.png",
-        "alt": ""
+        "alt": {"en": "", "es": ""}
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/bGqBEwQ"
     },
     {
       "id": "yummyy-bears",
       "title": "Yummyy Bears",
-      "category": "Web concept",
-      "description": "A concept website for a company that sells gummy bears.",
+      "category": {"en": "Web concept", "es": "Concepto web"},
+      "description": {
+        "en": "A concept website for a company that sells gummy bears.",
+        "es": "Un sitio web conceptual para una empresa que vende ositos de goma."
+      },
       "technologies": [],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1622661087/personal_portafolio/yummyy_bears_concept_mkcxsc.png",
-        "alt": ""
+        "alt": {"en": "", "es": ""}
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/XWMRbdm"
     },
     {
       "id": "rushmachine",
       "title": "RushMachine",
-      "category": "Interactive tool",
-      "description": "A virtual sound board to help you create a catchy beat.",
+      "category": {"en": "Interactive tool", "es": "Herramienta interactiva"},
+      "description": {
+        "en": "A virtual sound board to help you create a catchy beat.",
+        "es": "Una caja de ritmos virtual que te ayuda a crear un ritmo pegadizo."
+      },
       "technologies": [],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1626047808/personal_portafolio/rushmachine_thumbnail_yy4tb5.png",
-        "alt": ""
+        "alt": {"en": "", "es": ""}
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/zYwqZeY"
     },
     {
       "id": "random-quote-machine",
       "title": "Random Quote Machine",
-      "category": "Interactive tool",
-      "description": "A website that generates a random famous quote.",
+      "category": {"en": "Interactive tool", "es": "Herramienta interactiva"},
+      "description": {
+        "en": "A website that generates a random famous quote.",
+        "es": "Un sitio web que genera al azar una cita célebre."
+      },
       "technologies": [],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1626045606/personal_portafolio/random_quote_generator_thumbnail_xccpq0.png",
-        "alt": ""
+        "alt": {"en": "", "es": ""}
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/ExmVEap"
     },
     {
       "id": "markdown-online",
       "title": "Markdown Online",
-      "category": "Editor",
-      "description": "An online Markdown editor and previewer.",
+      "category": {"en": "Editor", "es": "Editor"},
+      "description": {
+        "en": "An online Markdown editor and previewer.",
+        "es": "Un editor de Markdown en línea con vista previa."
+      },
       "technologies": [],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1626046188/personal_portafolio/markdow_previewer_thumbnail_n9wdq1.png",
-        "alt": ""
+        "alt": {"en": "", "es": ""}
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/poPjWdE"
     },
     {
       "id": "pomodoro-tracker",
       "title": "Pomodoro Tracker",
-      "category": "Productivity tool",
-      "description": "A pomodoro tracker tool to help you focus on your current task.",
+      "category": {"en": "Productivity tool", "es": "Herramienta de productividad"},
+      "description": {
+        "en": "A pomodoro tracker tool to help you focus on your current task.",
+        "es": "Una herramienta de seguimiento Pomodoro que te ayuda a concentrarte en la tarea actual."
+      },
       "technologies": [],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1626047083/personal_portafolio/pomodoro_thumbnail_oukgsa.png",
-        "alt": ""
+        "alt": {"en": "", "es": ""}
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/NWjRNQJ"
     },
     {
       "id": "react-calculator",
       "title": "React Calculator",
-      "category": "Calculator",
-      "description": "A mininal calculator made with reactjs with a vintage style.",
-      "technologies": [
-        "React"
-      ],
+      "category": {"en": "Calculator", "es": "Calculadora"},
+      "description": {
+        "en": "A mininal calculator made with reactjs with a vintage style.",
+        "es": "Una calculadora minimalista de estilo vintage creada con React."
+      },
+      "technologies": ["React"],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1626048572/personal_portafolio/reactcalculator_thumbnail_scca1b.png",
-        "alt": ""
+        "alt": {"en": "", "es": ""}
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/WNjQvQN"
     },
     {
       "id": "heic-to-png",
       "title": "HEIC to PNG Converter",
-      "category": "Image utility",
-      "description": "A Python script that converts HEIC images in a folder to PNG using pillow-heif and Pillow.",
-      "technologies": [
-        "Python",
-        "pillow-heif",
-        "Pillow"
-      ],
+      "category": {"en": "Image utility", "es": "Utilidad de imágenes"},
+      "description": {
+        "en": "A Python script that converts HEIC images in a folder to PNG using pillow-heif and Pillow.",
+        "es": "Un script de Python que convierte a PNG las imágenes HEIC de una carpeta mediante pillow-heif y Pillow."
+      },
+      "technologies": ["Python", "pillow-heif", "Pillow"],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1683264900/heic-to-png_faxmdx.png",
-        "alt": "Screenshot of the HEIC to PNG Converter running in a terminal"
+        "alt": {
+          "en": "Screenshot of the HEIC to PNG Converter running in a terminal",
+          "es": "Captura de pantalla del conversor de HEIC a PNG ejecutándose en una terminal"
+        }
       },
       "projectUrl": "https://github.com/victorlvl47/heic-to-png"
     },
     {
       "id": "experiences-page-concept",
       "title": "Experiences Page Concept",
-      "category": "Web concept",
-      "description": "A front page concept made with React",
-      "technologies": [
-        "React"
-      ],
+      "category": {"en": "Web concept", "es": "Concepto web"},
+      "description": {
+        "en": "A front page concept made with React",
+        "es": "Un concepto de página principal creado con React."
+      },
+      "technologies": ["React"],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1651152390/personal_portafolio/online_experiences_react_thumbnail_kmviub.png",
-        "alt": ""
+        "alt": {"en": "", "es": ""}
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/NWwXJZY"
     },
     {
       "id": "react-business-card",
       "title": "React Business Card",
-      "category": "Web concept",
-      "description": "A business card with personal links, made with React.",
-      "technologies": [
-        "React"
-      ],
+      "category": {"en": "Web concept", "es": "Concepto web"},
+      "description": {
+        "en": "A business card with personal links, made with React.",
+        "es": "Una tarjeta de presentación con enlaces personales, creada con React."
+      },
+      "technologies": ["React"],
       "image": {
         "url": "https://res.cloudinary.com/de9fgkkam/image/upload/v1651151455/personal_portafolio/react_business_card_thumbnail_nx7ep7.png",
-        "alt": ""
+        "alt": {"en": "", "es": ""}
       },
       "projectUrl": "https://codepen.io/victorlvl47/full/YzEVyNj"
     }
   ],
   "contact": {
-    "eyebrow": "02 / Open line",
-    "heading": "Leave a message.",
-    "intro": "Need help with your project, or bringing your idea to the real world? Leave a message.",
+    "eyebrow": {"en": "02 / Open line", "es": "02 / Línea abierta"},
+    "heading": {"en": "Leave a message.", "es": "Deja un mensaje."},
+    "intro": {
+      "en": "Need help with your project, or bringing your idea to the real world? Leave a message.",
+      "es": "¿Necesitas ayuda con tu proyecto o para convertir tu idea en realidad? Deja un mensaje."
+    },
     "email": "victor.lvl47@gmail.com",
-    "emailAction": "Email Victor",
-    "linksLabel": "Direct lines",
+    "emailAction": {"en": "Email Victor", "es": "Enviar un correo a Victor"},
+    "linksLabel": {"en": "Direct lines", "es": "Líneas directas"},
     "links": [
       {
-        "label": "Facebook",
+        "id": "facebook",
+        "label": {"en": "Facebook", "es": "Facebook"},
         "url": "https://www.facebook.com/people/Victor-Maldonado/100066405635187/"
       },
       {
-        "label": "GitHub",
+        "id": "github",
+        "label": {"en": "GitHub", "es": "GitHub"},
         "url": "https://github.com/victorlvl47"
       },
       {
-        "label": "X",
+        "id": "x",
+        "label": {"en": "X", "es": "X"},
         "url": "https://twitter.com/vctrmm88"
       },
       {
-        "label": "Email",
+        "id": "email",
+        "label": {"en": "Email", "es": "Correo electrónico"},
         "url": "mailto:victor.lvl47@gmail.com"
       },
       {
-        "label": "YouTube",
+        "id": "youtube",
+        "label": {"en": "YouTube", "es": "YouTube"},
         "url": "https://www.youtube.com/channel/UCWvGIAg19NdMnAbEBqwLvnA"
       },
       {
-        "label": "LinkedIn",
+        "id": "linkedin",
+        "label": {"en": "LinkedIn", "es": "LinkedIn"},
         "url": "https://www.linkedin.com/in/victor-maldonado-7a613420b/"
       },
       {
-        "label": "Reddit",
+        "id": "reddit",
+        "label": {"en": "Reddit", "es": "Reddit"},
         "url": "https://www.reddit.com/user/viclvl47"
       }
     ]
   },
   "footer": {
     "mark": "VM /",
-    "location": "Guatemala / worldwide",
-    "quote": "Self-education is, I firmly believe, the only kind of education there is.",
+    "location": {"en": "Guatemala / worldwide", "es": "Guatemala / todo el mundo"},
+    "quote": {
+      "en": "Self-education is, I firmly believe, the only kind of education there is.",
+      "es": "La autoeducación es, creo firmemente, el único tipo de educación que existe."
+    },
     "quoteAttribution": "Isaac Asimov",
-    "topAction": "Back to top",
-    "image": {
-      "url": "/images/placeholders/exit.svg",
-      "alt": ""
-    }
+    "topAction": {"en": "Back to top", "es": "Volver arriba"},
+    "image": {"url": "/images/placeholders/exit.svg", "alt": {"en": "", "es": ""}}
+  },
+  "ui": {
+    "skipToContent": {"en": "Skip to content", "es": "Saltar al contenido"},
+    "mainNavigationLabel": {"en": "Main navigation", "es": "Navegación principal"},
+    "backToTopLabel": {"en": "Back to top", "es": "Volver arriba"},
+    "technologiesLabel": {"en": "Technologies", "es": "Tecnologías"},
+    "opensInNewTab": {"en": "opens in a new tab", "es": "se abre en una pestaña nueva"},
+    "projectCount": {
+      "en": "{shown} of {total} projects displayed",
+      "es": "{shown} de {total} proyectos mostrados"
+    },
+    "copyEmailLabel": {
+      "en": "Copy email address",
+      "es": "Copiar dirección de correo electrónico"
+    },
+    "copyEmailAction": {"en": "Copy", "es": "Copiar"},
+    "emailCopied": {"en": "Copied!", "es": "¡Copiado!"},
+    "emailCopyError": {
+      "en": "Could not copy. Select the address to copy it.",
+      "es": "No se pudo copiar. Selecciona la dirección para copiarla."
+    },
+    "languageSelectorLabel": {"en": "Select language", "es": "Seleccionar idioma"}
   }
 }
