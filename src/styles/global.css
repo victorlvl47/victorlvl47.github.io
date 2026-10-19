@@ -55,7 +55,7 @@ h3 { font-size: clamp(1.65rem, 2vw, 2.1rem); margin-bottom: .65rem; }
 .button--primary { background: var(--exit-mint); border-color: var(--exit-mint); color: var(--room-black); }
 .button--primary:hover { background: var(--fluorescent-warmth); border-color: var(--fluorescent-warmth); }
 .button:disabled { cursor: wait; opacity: .7; }
-.hero-action-icon { display: inline-block; width: 1em; height: 1em; background: currentColor; mask: url('/images/icons/arrow-narrow-up.svg') center / contain no-repeat; -webkit-mask: url('/images/icons/arrow-narrow-up.svg') center / contain no-repeat; transform: rotate(90deg); }
+.hero-action-icon { display: inline-block; width: 1em; height: 1em; background: currentColor; mask: url('/images/icons/arrow-up1.svg') center / contain no-repeat; -webkit-mask: url('/images/icons/arrow-up1.svg') center / contain no-repeat; transform: rotate(90deg); }
 .external-link-icon { display: inline-block; width: .9em; height: .9em; margin-left: .2em; vertical-align: -.08em; background: currentColor; mask: url('/images/icons/arrow-up-right.svg') center / contain no-repeat; -webkit-mask: url('/images/icons/arrow-up-right.svg') center / contain no-repeat; }
 .hero { position: relative; isolation: isolate; min-height: 580px; padding: calc(80px + clamp(3.25rem, 4vw, 4.5rem)) 0 clamp(3.25rem, 4vw, 4.5rem); overflow: hidden; background: var(--room-black); }
 .hero::after { position: absolute; z-index: -1; inset: 0; content: ''; pointer-events: none; background: linear-gradient(90deg, rgba(17, 18, 16, .84) 0%, rgba(17, 18, 16, .62) 31%, rgba(17, 18, 16, .14) 62%, rgba(17, 18, 16, 0) 100%); }
