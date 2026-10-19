@@ -13,6 +13,14 @@ if (control && grid) {
   let loading = false;
 
   const label = (key: string) => control.dataset[key] ?? '';
+  const projectCount = (shown: number) => label('countLabel')
+    .replace('{shown}', String(shown))
+    .replace('{total}', String(total));
+  const setLoadButtonLabel = (text: string) => {
+    const icon = element('span', 'load-more-icon');
+    icon.setAttribute('aria-hidden', 'true');
+    button.replaceChildren(document.createTextNode(text), icon);
+  };
   const initialCount = grid.children.length;
   if (total > initialCount) button.hidden = false;
   else status.textContent = label('endLabel');
@@ -46,15 +54,18 @@ if (control && grid) {
     body.append(element('p', 'project-card__description', project.description));
     if (project.technologies.length > 0) {
       const tech = element('ul', 'project-card__technologies mono');
-      tech.setAttribute('aria-label', 'Technologies');
+      tech.setAttribute('aria-label', label('technologiesLabel'));
       for (const item of project.technologies) tech.append(element('li', undefined, item));
       body.append(tech);
     }
-    const link = element('a', 'project-card__link mono', `${label('action')} ↗`);
+    const link = element('a', 'project-card__link mono', `${label('action')} `);
     link.href = project.projectUrl;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
-    link.setAttribute('aria-label', `${label('action')}: ${project.title} (opens in a new tab)`);
+    link.setAttribute('aria-label', `${label('action')}: ${project.title} (${label('newTabLabel')})`);
+    const externalIcon = element('span', 'external-link-icon');
+    externalIcon.setAttribute('aria-hidden', 'true');
+    link.append(externalIcon);
     body.append(link);
     card.append(body);
     return card;
@@ -78,9 +89,9 @@ if (control && grid) {
       grid.append(...next.map((project, index) => projectCard(project, initialCount + appended + index + 1)));
       appended += next.length;
       const shown = initialCount + appended;
-      status.textContent = shown >= total ? label('endLabel') : `${shown} of ${total} projects displayed`;
+      status.textContent = shown >= total ? label('endLabel') : projectCount(shown);
       if (shown >= total) button.hidden = true;
-      else button.textContent = `${label('loadLabel')} ↓`;
+      else setLoadButtonLabel(label('loadLabel'));
     } catch {
       status.textContent = label('errorLabel');
       button.textContent = label('retryLabel');
