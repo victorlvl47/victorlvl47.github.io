@@ -43,7 +43,7 @@ const initialProjectCount = portfolio.ui.projectCount
           <div class="projects__heading"><h2 id="projects-title">{portfolio.work.heading}</h2><p>{portfolio.work.intro}</p></div>
           <div id="project-grid" class="project-grid">{initialProjects.map((project, index) => <ProjectCard project={project} number={index + 1} action={portfolio.work.projectAction} technologiesLabel={portfolio.ui.technologiesLabel} opensInNewTab={portfolio.ui.opensInNewTab} />)}</div>
           <div class="projects__more" data-load-more data-url={projectsUrl} data-total={portfolio.projects.length} data-action={portfolio.work.projectAction} data-load-label={portfolio.work.loadAction} data-loading-label={portfolio.work.loadingAction} data-retry-label={portfolio.work.retryAction} data-error-label={portfolio.work.loadError} data-end-label={portfolio.work.endMessage} data-count-label={portfolio.ui.projectCount} data-technologies-label={portfolio.ui.technologiesLabel} data-new-tab-label={portfolio.ui.opensInNewTab}>
-            <button class="button button--ghost" type="button" hidden>{portfolio.work.loadAction} ↓</button>
+            <button class="button button--ghost" type="button" hidden>{portfolio.work.loadAction}<span class="load-more-icon" aria-hidden="true"></span></button>
             <p class="projects__status mono" role="status" aria-live="polite">{initialProjectCount}</p>
           </div>
         </div>

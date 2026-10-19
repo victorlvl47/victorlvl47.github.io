@@ -16,6 +16,11 @@ if (control && grid) {
   const projectCount = (shown: number) => label('countLabel')
     .replace('{shown}', String(shown))
     .replace('{total}', String(total));
+  const setLoadButtonLabel = (text: string) => {
+    const icon = element('span', 'load-more-icon');
+    icon.setAttribute('aria-hidden', 'true');
+    button.replaceChildren(document.createTextNode(text), icon);
+  };
   const initialCount = grid.children.length;
   if (total > initialCount) button.hidden = false;
   else status.textContent = label('endLabel');
@@ -86,7 +91,7 @@ if (control && grid) {
       const shown = initialCount + appended;
       status.textContent = shown >= total ? label('endLabel') : projectCount(shown);
       if (shown >= total) button.hidden = true;
-      else button.textContent = `${label('loadLabel')} ↓`;
+      else setLoadButtonLabel(label('loadLabel'));
     } catch {
       status.textContent = label('errorLabel');
       button.textContent = label('retryLabel');
