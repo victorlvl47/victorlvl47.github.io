@@ -47,6 +47,7 @@ h3 { font-size: clamp(1.65rem, 2vw, 2.1rem); margin-bottom: .65rem; }
 .language-selector__world { width: 1rem; height: 1rem; }
 .language-selector__triangle { width: .7rem; height: .7rem; transform: rotate(180deg); transition: transform .2s ease; }
 .language-selector[open] .language-selector__triangle { transform: rotate(0); }
+.language-selector__active-icon { width: .85rem; height: .85rem; flex: 0 0 auto; background: currentColor; mask: url('/images/icons/checked-success.svg') center / contain no-repeat; -webkit-mask: url('/images/icons/checked-success.svg') center / contain no-repeat; }
 .language-selector ul { position: absolute; top: calc(100% + .5rem); right: 0; min-width: 145px; padding: .35rem; margin: 0; border: 1px solid var(--quiet-border); background: var(--room-black); list-style: none; }
 .language-selector a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 42px; padding: .55rem .65rem; color: var(--dust-grey); font-size: .72rem; text-decoration: none; }
 .language-selector a:hover, .language-selector a[aria-current='page'] { color: var(--exit-mint); background: var(--shadow-surface); }

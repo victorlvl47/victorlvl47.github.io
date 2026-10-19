@@ -21,7 +21,7 @@ const languageLinks = [
           <img class="language-selector__triangle" src="/images/icons/triangle-up.svg" alt="" width="12" height="12" />
         </summary>
         <ul aria-label={ui.languageSelectorLabel}>
-          {languageLinks.map((language) => <li><a class="mono" href={language.href} lang={language.locale} hreflang={language.locale} aria-current={locale === language.locale ? 'page' : undefined} data-language-link>{language.label}<span aria-hidden="true">{locale === language.locale ? '✓' : ''}</span></a></li>)}
+          {languageLinks.map((language) => <li><a class="mono" href={language.href} lang={language.locale} hreflang={language.locale} aria-current={locale === language.locale ? 'page' : undefined} data-language-link>{language.label}{locale === language.locale && <span class="language-selector__active-icon" aria-hidden="true"></span>}</a></li>)}
         </ul>
       </details>
     </div>
