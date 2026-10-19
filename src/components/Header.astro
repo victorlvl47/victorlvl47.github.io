@@ -15,7 +15,11 @@ const languageLinks = [
     <nav aria-label={ui.mainNavigationLabel}><ul>{navigation.map((item) => <li><a href={item.href}>{item.label}</a></li>)}</ul></nav>
     <div class="site-header__meta">
       <details class="language-selector" data-language-selector>
-        <summary class="mono" aria-label={ui.languageSelectorLabel}>{locale.toUpperCase()} <span aria-hidden="true">⌄</span></summary>
+        <summary class="mono" aria-label={ui.languageSelectorLabel}>
+          <img class="language-selector__world" src="/images/icons/world-icon.svg" alt="" width="18" height="18" />
+          <span>{locale.toUpperCase()}</span>
+          <img class="language-selector__triangle" src="/images/icons/triangle-up.svg" alt="" width="12" height="12" />
+        </summary>
         <ul aria-label={ui.languageSelectorLabel}>
           {languageLinks.map((language) => <li><a class="mono" href={language.href} lang={language.locale} hreflang={language.locale} aria-current={locale === language.locale ? 'page' : undefined} data-language-link>{language.label}<span aria-hidden="true">{locale === language.locale ? '✓' : ''}</span></a></li>)}
         </ul>
