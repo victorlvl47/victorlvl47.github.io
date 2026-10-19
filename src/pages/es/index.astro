@@ -1,0 +1,8 @@
+---
+import PortfolioPage from '../../layouts/PortfolioPage.astro';
+import { loadPortfolio } from '../../lib/portfolio';
+
+const locale = 'es';
+const portfolio = await loadPortfolio(locale);
+---
+<PortfolioPage locale={locale} portfolio={portfolio} />

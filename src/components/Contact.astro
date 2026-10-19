@@ -1,16 +1,16 @@
 ---
 import type { Portfolio } from '../lib/portfolio';
 import { Icon } from 'astro-icon/components';
-interface Props { contact: Portfolio['contact']; backgroundImage: Portfolio['hero']['image'] }
-const { contact, backgroundImage } = Astro.props;
+interface Props { contact: Portfolio['contact']; backgroundImage: Portfolio['hero']['image']; ui: Portfolio['ui'] }
+const { contact, backgroundImage, ui } = Astro.props;
 const socialIcons: Record<string, string> = {
-  Facebook: 'simple-icons:facebook',
-  Email: 'email',
-  GitHub: 'simple-icons:github',
-  X: 'simple-icons:x',
-  YouTube: 'simple-icons:youtube',
-  LinkedIn: 'simple-icons:linkedin',
-  Reddit: 'simple-icons:reddit'
+  facebook: 'simple-icons:facebook',
+  email: 'email',
+  github: 'simple-icons:github',
+  x: 'simple-icons:x',
+  youtube: 'simple-icons:youtube',
+  linkedin: 'simple-icons:linkedin',
+  reddit: 'simple-icons:reddit'
 };
 ---
 <section id="contact" class="contact section-rule" aria-labelledby="contact-title" data-parallax-section>
@@ -20,14 +20,14 @@ const socialIcons: Record<string, string> = {
       <p class="eyebrow mono">{contact.eyebrow}</p>
       <h2 id="contact-title">{contact.heading}</h2>
       <p class="contact__intro">{contact.intro}</p>
-      <a class="button button--primary" href={`mailto:${contact.email}`}>{contact.emailAction} <span aria-hidden="true">↗</span></a>
+      <a class="button button--primary" href={`mailto:${contact.email}`}>{contact.emailAction} <span class="external-link-icon" aria-hidden="true"></span></a>
       <div class="contact__email-row">
         <span class="contact__email mono" data-email-address>{contact.email}</span>
-        <button class="contact__copy-button mono" type="button" data-copy-email hidden aria-label="Copy email address">Copy</button>
+        <button class="contact__copy-button mono" type="button" data-copy-email data-success={ui.emailCopied} data-error={ui.emailCopyError} hidden aria-label={ui.copyEmailLabel}>{ui.copyEmailAction}</button>
         <span class="contact__copy-status mono" role="status" aria-live="polite" data-copy-status></span>
       </div>
       <p class="contact__label mono">{contact.linksLabel}</p>
-      <ul class="contact__links">{contact.links.map((link) => <li><a href={link.url} target={link.url.startsWith('mailto:') ? undefined : '_blank'} rel={link.url.startsWith('mailto:') ? undefined : 'noopener noreferrer'} aria-label={link.url.startsWith('mailto:') ? link.label : `${link.label} (opens in a new tab)`}><span class="contact__link-content">{socialIcons[link.label] && <Icon name={socialIcons[link.label]} class="contact__social-icon" aria-hidden="true" />}<span>{link.label}</span></span><span aria-hidden="true">↗</span></a></li>)}</ul>
+      <ul class="contact__links">{contact.links.map((link) => <li><a href={link.url} target={link.id === 'email' ? undefined : '_blank'} rel={link.id === 'email' ? undefined : 'noopener noreferrer'} aria-label={link.id === 'email' ? link.label : `${link.label} (${ui.opensInNewTab})`}><span class="contact__link-content">{socialIcons[link.id] && <Icon name={socialIcons[link.id]} class="contact__social-icon" aria-hidden="true" />}<span>{link.label}</span></span><span class="external-link-icon" aria-hidden="true"></span></a></li>)}</ul>
     </div>
   </div>
 </section>
@@ -47,7 +47,7 @@ const socialIcons: Record<string, string> = {
         if (navigator.clipboard?.writeText) {
           try {
             await navigator.clipboard.writeText(address);
-            status.textContent = 'Copied!';
+            status.textContent = copyButton.dataset.success ?? '';
             return;
           } catch {
             // Clipboard access can be unavailable on a phone using a local HTTP address.
@@ -66,9 +66,9 @@ const socialIcons: Record<string, string> = {
         } finally {
           field.remove();
         }
-        status.textContent = 'Copied!';
+        status.textContent = copyButton.dataset.success ?? '';
       } catch {
-        status.textContent = 'Could not copy. Select the address to copy it.';
+        status.textContent = copyButton.dataset.error ?? '';
       }
     });
   }
