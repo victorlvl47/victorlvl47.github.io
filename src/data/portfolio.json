@@ -461,7 +461,10 @@
   },
   "footer": {
     "mark": "VM /",
-    "location": {"en": "Guatemala / worldwide", "es": "Guatemala / todo el mundo"},
+    "location": {
+      "country": "Guatemala",
+      "worldwide": {"en": "worldwide", "es": "todo el mundo"}
+    },
     "quote": {
       "en": "Self-education is, I firmly believe, the only kind of education there is.",
       "es": "Self-education is, I firmly believe, the only kind of education there is."

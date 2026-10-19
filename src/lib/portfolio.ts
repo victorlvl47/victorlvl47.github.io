@@ -21,7 +21,7 @@ export interface Portfolio {
   work: { eyebrow: string; heading: string; intro: string; projectAction: string; loadAction: string; loadingAction: string; retryAction: string; loadError: string; endMessage: string };
   projects: Project[];
   contact: { eyebrow: string; heading: string; intro: string; email: string; emailAction: string; linksLabel: string; links: { id: string; label: string; url: string }[] };
-  footer: { mark: string; location: string; quote: string; quoteAttribution: string; topAction: string; image: ImageContent };
+  footer: { mark: string; location: { country: string; worldwide: string }; quote: string; quoteAttribution: string; topAction: string; image: ImageContent };
   ui: { skipToContent: string; mainNavigationLabel: string; backToTopLabel: string; technologiesLabel: string; opensInNewTab: string; projectCount: string; copyEmailLabel: string; copyEmailAction: string; emailCopied: string; emailCopyError: string; languageSelectorLabel: string };
 }
 
@@ -134,9 +134,14 @@ export async function validatePortfolio(raw: unknown, locale: Locale): Promise<P
   if (contact.links.find(({ id }) => id === 'email')?.url !== `mailto:${contact.email}`) throw new Error('Email link must match contact.email');
   const footerSource = object(data.footer, 'footer');
   const quoteAttribution = string(footerSource.quoteAttribution, 'footer.quoteAttribution');
+  const locationSource = object(footerSource.location, 'footer.location');
   const footer = {
     mark: string(footerSource.mark, 'footer.mark'),
-    ...localizedFields(footerSource, ['location', 'quote', 'topAction'], 'footer', locale),
+    location: {
+      country: string(locationSource.country, 'footer.location.country'),
+      worldwide: localized(locationSource.worldwide, 'footer.location.worldwide', locale)
+    },
+    ...localizedFields(footerSource, ['quote', 'topAction'], 'footer', locale),
     quoteAttribution,
     image: await image(footerSource.image, 'footer.image', locale)
   } as Portfolio['footer'];

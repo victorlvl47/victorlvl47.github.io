@@ -7,6 +7,13 @@ const { footer, name, backToTopLabel } = Astro.props;
   <div class="shell site-footer__grid">
     <div class="site-footer__identity"><a class="site-footer__mark" href="#top" aria-label={backToTopLabel}><img src="/images/brand/mascot_with_name.png" alt="" width="2000" height="2000" /></a><p class="mono">{name} &copy; {new Date().getFullYear()}</p></div>
     <div class="site-footer__quote"><blockquote>&ldquo;{footer.quote}&rdquo;</blockquote><cite class="mono">&mdash; {footer.quoteAttribution}</cite></div>
-    <div class="site-footer__meta"><a class="site-footer__top mono" href="#top">{footer.topAction} &uarr;</a><p class="mono">{footer.location}</p></div>
+    <div class="site-footer__meta">
+      <a class="site-footer__top mono" href="#top">{footer.topAction} &uarr;</a>
+      <p class="site-footer__location mono">
+        <span><img src="/images/icons/gt-flag.svg" alt="" width="18" height="18" />{footer.location.country}</span>
+        <span aria-hidden="true">/</span>
+        <span><img src="/images/icons/globe.svg" alt="" width="18" height="18" />{footer.location.worldwide}</span>
+      </p>
+    </div>
   </div>
 </footer>
