@@ -125,6 +125,7 @@ h3 { font-size: clamp(1.65rem, 2vw, 2.1rem); margin-bottom: .65rem; }
 .site-footer cite { display: block; margin-top: .65rem; color: var(--exit-mint); font-size: .72rem; font-style: normal; white-space: nowrap; }
 .site-footer__meta { display: flex; flex-direction: column; align-items: end; padding-left: clamp(1.5rem, 4vw, 5rem); text-align: right; }
 .site-footer__top { color: var(--exit-mint); font-size: .74rem; text-transform: uppercase; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .35em; white-space: nowrap; }
+.back-to-top-icon { display: inline-block; width: .95em; height: .95em; margin-left: .35em; vertical-align: -.12em; background: currentColor; mask: url('/images/icons/double-right-sign.svg') center / contain no-repeat; -webkit-mask: url('/images/icons/double-right-sign.svg') center / contain no-repeat; transform: rotate(-90deg); }
 .site-footer__location { display: flex; align-items: center; justify-content: end; gap: .45rem; }
 .site-footer__location span { display: inline-flex; align-items: center; gap: .32rem; white-space: nowrap; }
 .site-footer__location img { width: .95rem; height: .95rem; object-fit: contain; }
