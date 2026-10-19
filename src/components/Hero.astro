@@ -16,11 +16,11 @@ const { site, hero, opensInNewTab } = Astro.props;
       <h1 id="hero-title">{site.name}</h1>
       <p class="hero__role mono">{site.role}</p>
       <p class="hero__tagline">{site.tagline}</p>
-      <div class="hero__actions"><a class="button button--primary" href="#projects">{hero.primaryAction} <span aria-hidden="true">→</span></a><a class="button button--ghost" href="#contact">{hero.secondaryAction}</a></div>
+      <div class="hero__actions"><a class="button button--primary" href="#projects">{hero.primaryAction} <span class="hero-action-icon" aria-hidden="true"></span></a><a class="button button--ghost" href="#contact">{hero.secondaryAction}</a></div>
       <div class="hero__preview">
         <span class="mono">{hero.previewLabel}</span>
         <p>{hero.previewText}</p>
-        <a class="hero__preview-link mono" href={hero.previewLinkUrl} target="_blank" rel="noreferrer" aria-label={`${hero.previewLinkLabel} (${opensInNewTab})`}>{hero.previewLinkLabel} <span aria-hidden="true">↗</span></a>
+        <a class="hero__preview-link mono" href={hero.previewLinkUrl} target="_blank" rel="noreferrer" aria-label={`${hero.previewLinkLabel} (${opensInNewTab})`}>{hero.previewLinkLabel} <span class="external-link-icon" aria-hidden="true"></span></a>
       </div>
     </div>
   </div>

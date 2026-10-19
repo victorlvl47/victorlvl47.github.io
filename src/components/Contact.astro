@@ -20,14 +20,14 @@ const socialIcons: Record<string, string> = {
       <p class="eyebrow mono">{contact.eyebrow}</p>
       <h2 id="contact-title">{contact.heading}</h2>
       <p class="contact__intro">{contact.intro}</p>
-      <a class="button button--primary" href={`mailto:${contact.email}`}>{contact.emailAction} <span aria-hidden="true">↗</span></a>
+      <a class="button button--primary" href={`mailto:${contact.email}`}>{contact.emailAction} <span class="external-link-icon" aria-hidden="true"></span></a>
       <div class="contact__email-row">
         <span class="contact__email mono" data-email-address>{contact.email}</span>
         <button class="contact__copy-button mono" type="button" data-copy-email data-success={ui.emailCopied} data-error={ui.emailCopyError} hidden aria-label={ui.copyEmailLabel}>{ui.copyEmailAction}</button>
         <span class="contact__copy-status mono" role="status" aria-live="polite" data-copy-status></span>
       </div>
       <p class="contact__label mono">{contact.linksLabel}</p>
-      <ul class="contact__links">{contact.links.map((link) => <li><a href={link.url} target={link.id === 'email' ? undefined : '_blank'} rel={link.id === 'email' ? undefined : 'noopener noreferrer'} aria-label={link.id === 'email' ? link.label : `${link.label} (${ui.opensInNewTab})`}><span class="contact__link-content">{socialIcons[link.id] && <Icon name={socialIcons[link.id]} class="contact__social-icon" aria-hidden="true" />}<span>{link.label}</span></span><span aria-hidden="true">↗</span></a></li>)}</ul>
+      <ul class="contact__links">{contact.links.map((link) => <li><a href={link.url} target={link.id === 'email' ? undefined : '_blank'} rel={link.id === 'email' ? undefined : 'noopener noreferrer'} aria-label={link.id === 'email' ? link.label : `${link.label} (${ui.opensInNewTab})`}><span class="contact__link-content">{socialIcons[link.id] && <Icon name={socialIcons[link.id]} class="contact__social-icon" aria-hidden="true" />}<span>{link.label}</span></span><span class="external-link-icon" aria-hidden="true"></span></a></li>)}</ul>
     </div>
   </div>
 </section>

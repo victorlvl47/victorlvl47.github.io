@@ -15,6 +15,6 @@ const { project, number, action, technologiesLabel, opensInNewTab } = Astro.prop
     {project.technologies.length > 0 && <ul class="project-card__technologies mono" aria-label={technologiesLabel}>
       {project.technologies.map((technology) => <li>{technology}</li>)}
     </ul>}
-    <a class="project-card__link mono" href={project.projectUrl} target="_blank" rel="noopener noreferrer" aria-label={`${action}: ${project.title} (${opensInNewTab})`}>{action} <span aria-hidden="true">↗</span></a>
+    <a class="project-card__link mono" href={project.projectUrl} target="_blank" rel="noopener noreferrer" aria-label={`${action}: ${project.title} (${opensInNewTab})`}>{action} <span class="external-link-icon" aria-hidden="true"></span></a>
   </div>
 </article>

@@ -53,11 +53,14 @@ if (control && grid) {
       for (const item of project.technologies) tech.append(element('li', undefined, item));
       body.append(tech);
     }
-    const link = element('a', 'project-card__link mono', `${label('action')} ↗`);
+    const link = element('a', 'project-card__link mono', `${label('action')} `);
     link.href = project.projectUrl;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
     link.setAttribute('aria-label', `${label('action')}: ${project.title} (${label('newTabLabel')})`);
+    const externalIcon = element('span', 'external-link-icon');
+    externalIcon.setAttribute('aria-hidden', 'true');
+    link.append(externalIcon);
     body.append(link);
     card.append(body);
     return card;
