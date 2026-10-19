@@ -30,7 +30,7 @@
       "en": "https://en.wikipedia.org/wiki/The_Backrooms",
       "es": "https://es.wikipedia.org/wiki/The_Backrooms"
     },
-    "image": {"url": "/images/placeholders/corridor-hero.png", "alt": {"en": "", "es": ""}}
+    "image": {"url": "/images/corridor-hero2.png", "alt": {"en": "", "es": ""}}
   },
   "work": {
     "eyebrow": {"en": "01 / The Laboratory", "es": "01 / El laboratorio"},
