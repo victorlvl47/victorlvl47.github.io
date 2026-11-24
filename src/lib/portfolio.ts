@@ -27,7 +27,7 @@ export interface Portfolio {
 
 const sourceFile = path.resolve(process.cwd(), 'src/data/portfolio.json');
 const publicDir = path.resolve(process.cwd(), 'public');
-const requiredContactIds = ['facebook', 'github', 'x', 'email', 'youtube', 'linkedin', 'reddit'];
+const requiredContactIds = ['facebook', 'github', 'x', 'email', 'youtube', 'linkedin', 'reddit', 'leetcode'];
 const exactQuote = 'Self-education is, I firmly believe, the only kind of education there is.';
 
 export function isLocale(value: string): value is Locale {
@@ -130,7 +130,7 @@ export async function validatePortfolio(raw: unknown, locale: Locale): Promise<P
     })
   } as Portfolio['contact'];
   if (contact.email !== 'victor.lvl47@gmail.com') throw new Error('contact.email differs from the confirmed address');
-  if (contact.links.map(({ id }) => id).join('|') !== requiredContactIds.join('|')) throw new Error('contact.links must contain the seven required destination IDs in order');
+  if (contact.links.map(({ id }) => id).join('|') !== requiredContactIds.join('|')) throw new Error('contact.links must contain the eight required destination IDs in order');
   if (contact.links.find(({ id }) => id === 'email')?.url !== `mailto:${contact.email}`) throw new Error('Email link must match contact.email');
   const footerSource = object(data.footer, 'footer');
   const quoteAttribution = string(footerSource.quoteAttribution, 'footer.quoteAttribution');

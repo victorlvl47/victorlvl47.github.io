@@ -456,6 +456,11 @@
         "id": "reddit",
         "label": {"en": "Reddit", "es": "Reddit"},
         "url": "https://www.reddit.com/user/viclvl47"
+      },
+      {
+        "id": "leetcode",
+        "label": {"en": "LeetCode", "es": "LeetCode"},
+        "url": "https://leetcode.com/u/undead_vic/"
       }
     ]
   },
