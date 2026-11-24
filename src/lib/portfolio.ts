@@ -27,7 +27,7 @@ export interface Portfolio {
 
 const sourceFile = path.resolve(process.cwd(), 'src/data/portfolio.json');
 const publicDir = path.resolve(process.cwd(), 'public');
-const requiredContactIds = ['facebook', 'github', 'leetcode', 'x', 'email', 'youtube', 'linkedin', 'reddit'];
+const requiredContactIds = ['facebook', 'github', 'x', 'email', 'youtube', 'linkedin', 'reddit', 'leetcode'];
 const exactQuote = 'Self-education is, I firmly believe, the only kind of education there is.';
 
 export function isLocale(value: string): value is Locale {

@@ -433,11 +433,6 @@
         "url": "https://github.com/victorlvl47"
       },
       {
-        "id": "leetcode",
-        "label": {"en": "LeetCode", "es": "LeetCode"},
-        "url": "https://leetcode.com/u/undead_vic/"
-      },
-      {
         "id": "x",
         "label": {"en": "X", "es": "X"},
         "url": "https://twitter.com/vctrmm88"
@@ -461,6 +456,11 @@
         "id": "reddit",
         "label": {"en": "Reddit", "es": "Reddit"},
         "url": "https://www.reddit.com/user/viclvl47"
+      },
+      {
+        "id": "leetcode",
+        "label": {"en": "LeetCode", "es": "LeetCode"},
+        "url": "https://leetcode.com/u/undead_vic/"
       }
     ]
   },
